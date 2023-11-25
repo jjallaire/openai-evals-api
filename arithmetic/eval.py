@@ -1,3 +1,4 @@
+from pathlib import Path
 import random
 
 import evals
@@ -5,7 +6,10 @@ import evals.metrics
 
 class Arithmetic(evals.Eval):
     def __init__(self, train_jsonl, test_jsonl, train_samples_per_prompt=2, **kwargs):
-        super().__init__(**kwargs)
+        super().__init__(
+            eval_registry_path=Path(),
+            **kwargs
+        )
         self.train_jsonl = train_jsonl
         self.test_jsonl = test_jsonl
         self.train_samples_per_prompt = train_samples_per_prompt

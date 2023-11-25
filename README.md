@@ -1,8 +1,8 @@
 ## OpenAI Evals API
 
-This repository explores defining and running custom [OpenAI Evals](https://github.com/openai/evals). The goal is to see how flexible the `evals` package is for use as a general platform / API for evaluations (decoupled from the built in evaluations and command line utilities provided by the `evals` package).
+This repository explores defining and running custom [OpenAI Evals](https://github.com/openai/evals). The goal is to see how flexible the `evals` package is for use as a general platform for new evaluations (decoupled from the built in evaluations, configuration database, and CLI provided by the `evals` package).
 
-For purposes of experimentation we implement the `arithmetic` custom eval (based on the documentation in [Custom Evals](https://github.com/openai/evals/blob/main/docs/custom-eval.md)).
+For purposes of experimentation we implement the `arithmetic` custom eval (based on the documentation in [Custom Evals](https://github.com/openai/evals/blob/main/docs/custom-eval.md)). We then run this eval using the standard `oaieval` CLI tool. Finally, we run the eval entirely from a Python script (`runeval.py`) that makes use of the requisite `evals` Python APIs rather than involing the CLI.
 
 ### Setup
 
@@ -57,3 +57,29 @@ PYTHONPATH="." oaieval --registry_path=registry  gpt-3.5-turbo arithmetic
 Note that this will by default use the OpenAI API to run the evaluations, so you should be sure to have the `OPENAI_API_KEY` environment variable set.
 
 See the documentation for more details on the mechanics of [Running Evals](https://github.com/openai/evals/blob/main/docs/run-evals.md).
+
+### Custom Eval Script
+
+The standard `oaieval` CLI tool operates from a registry of evaluations and associated datasets. Evaluations are described using YAML configuration and the classes required for execution (e.g. evaluators, completion functions, recorders, etc.) are automatically instantiated by the CLI tool.
+
+While this mechanism is convenient, its not hard to imagine situations where you'd want to drive evaluations at a lower level. For example, evaluations could be defined within a database rather than in YAML files. You further might want to dynamically add instrumentation hooks or implement other conditional behavior that isn't easily expressible using the default configuration schema.
+
+The script `runeval.py` demonstrates how to run the `arithmetic` evaluation purely from Python APIs and without reference to YAML configuration or a registry. The script is purposely oversimplified (e.g. it supports only one model type) for the sake of illustration. 
+
+You can run it as follows:
+
+``` bash
+python3 runeval.py
+```
+
+Note that unlike the previous use of `oaieval`, this script doesn't require a `PYTHONPATH` or a `--registry_path`, as it is operating purely from code and data located in the `arithmetic` directory.
+ 
+
+
+
+
+
+
+
+
+
