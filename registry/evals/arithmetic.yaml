@@ -1,0 +1,9 @@
+arithmetic:
+  id: arithmetic.dev.match-v1
+  metrics: [accuracy]
+  description: Evaluate arithmetic ability
+arithmetic.dev.match-v1:
+  class: arithmetic.eval:Arithmetic
+  args:
+    train_jsonl: arithmetic/data/train.jsonl
+    test_jsonl: arithmetic/data/test.jsonl
