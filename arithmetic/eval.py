@@ -58,6 +58,9 @@ class Arithmetic(evals.Eval):
 
 
         result = self.completion_fn(prompt=prompt, temperature=0.0, max_tokens=1)
+        
         sampled = result.get_completions()[0]
+        words = sampled.split(" ")
+        answer = words[-1].rstrip(".")
 
-        evals.record_and_check_match(prompt=prompt, sampled=sampled, expected=test_sample["answer"])
+        evals.record_and_check_match(prompt=prompt, sampled=answer, expected=test_sample["answer"])

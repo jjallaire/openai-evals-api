@@ -28,11 +28,11 @@ pip install ../evals
 
 The `arithmetic` directory contains our custom evaluation and includes the following files:
 
-| File               | Description                           |
-|--------------------|---------------------------------------|
-| `eval.py`          | Custom eval derived from `evals.Eval` |
-| `data/test.jsonl`  | Evaluation samples                    |
-| `data/train.jsonl` | Few shot samples                      |
+|                                 |                                       |
+|---------------------------------|---------------------------------------|
+| `arithmetic/``eval.py`          | Custom eval derived from `evals.Eval` |
+| `arithmetic/``data/test.jsonl`  | Evaluation samples                    |
+| `arithmetic/``data/train.jsonl` | Few shot samples                      |
 
 The evaluation is registered in `registry/evals/arithmetic.yaml`:
 
@@ -64,7 +64,7 @@ The standard `oaieval` CLI tool operates from a registry of evaluations and asso
 
 While this mechanism is convenient, its not hard to imagine situations where you'd want to drive evaluations at a lower level. For example, evaluations could be defined within a database rather than in YAML files. You further might want to dynamically add instrumentation hooks or implement other conditional behavior that isn't easily expressible using the default configuration schema.
 
-The script `runeval.py` demonstrates how to run the `arithmetic` evaluation purely from Python APIs and without reference to YAML configuration or a registry. The script is purposely oversimplified (e.g. it supports only one model type) for the sake of illustration. 
+The script `runeval.py` demonstrates how to run the `arithmetic` evaluation purely from Python APIs and without reference to YAML configuration or a registry. The script is purposely oversimplified (e.g. it supports only one model type) for the sake of illustration.
 
 You can run it as follows:
 
@@ -73,13 +73,22 @@ python3 runeval.py
 ```
 
 Note that unlike the previous use of `oaieval`, this script doesn't require a `PYTHONPATH` or a `--registry_path`, as it is operating purely from code and data located in the `arithmetic` directory.
- 
 
+### Extending Evals
 
+There are various ways to extend the `evals` package by providing custom classes. For example, you can provide a custom [completion function](https://github.com/openai/evals/blob/main/docs/completion-fns.md) or a custom [recorder](https://github.com/openai/evals/blob/main/evals/record.py) for logging evaluations.
 
+To experiment with these capabilities we implement two such extensions here:
 
+|                           |                                                                                                 |
+|---------------------------|-------------------------------------------------------------------------------------------------|
+| `extension/sqlite.py`     | Recorder class for [SQLite](https://sqlite.org/index.html) databases.                           |
+| `extension/cloudflare.py` | Completion function for CloudFlare [Workers AI](https://developers.cloudflare.com/workers-ai/). |
 
+We demonstrate the use of these extensions in the `runeval-extension.py` script. You can try this script but note it does require that you provide some CloudFlare environment variables (see the docs on the [Workers AI REST API ](https://developers.cloudflare.com/workers-ai/get-started/rest-api/)for details on provisioning accounts and tokens):
 
-
-
-
+``` bash
+export CLOUDFLARE_ACCOUNT_ID=<account-id>
+export CLOUDFLARE_API_TOKEN=<api-token>
+python3 runeval-extension.py
+```
