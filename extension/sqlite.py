@@ -41,6 +41,7 @@ class SqliteRecorder(RecorderBase):
             "INSERT INTO runs VALUES(:run_id, :model_name, :eval_name, :base_eval, :split, :run_config, :settings, :created_by, :created_at, :final_report)", 
             data
         )
+        self.conn.commit()
         atexit.register(self.flush_events)
 
     def _flush_events_internal(self, events_to_write: Sequence[Event]):
@@ -61,6 +62,7 @@ class SqliteRecorder(RecorderBase):
                 "INSERT INTO events VALUES(:run_id, :event_id, :sample_id, :type, :data, :created_by, :created_at)", 
                 data
             )
+            self.conn.commit()
             # record flush
             self._last_flush_time = time.time()
             self._flushes_done += 1
@@ -76,6 +78,7 @@ class SqliteRecorder(RecorderBase):
                 "UPDATE runs SET final_report = :final_report WHERE run_id = :run_id",
                 params
             )
+            self.conn.commit()
 
     def record_event(self, type, data=None, sample_id=None):
         # try to serialize data so we fail early!
