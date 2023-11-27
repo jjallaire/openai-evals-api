@@ -2,8 +2,8 @@ import os
 import logging
 
 from evals.base import RunSpec
-from evals.record import LocalRecorder
 
+from extension.sqlite import SqliteRecorder
 from extension.cloudflare import CloudFlareChatCompletionFn
 
 from arithmetic.eval import Arithmetic
@@ -16,11 +16,11 @@ logging.basicConfig(
 )
 logging.getLogger("openai").setLevel(logging.WARN)
 
-# create CompletionFn
+# create llama-2 on cloudflare completion function
 model = "@cf/meta/llama-2-7b-chat-int8"
 completion_fn = CloudFlareChatCompletionFn(model)
 
-# create recorder (requires run_spec)
+# create sqlite eval recorder
 base_eval = "arithmetic"
 split = "default"
 eval_name = f"{base_eval}.{split}"
@@ -32,8 +32,8 @@ run_spec = RunSpec(
     run_config={},
     created_by=os.getenv("USER", "")
 )
-record_path =  f"/tmp/evallogs/{run_spec.run_id}_{model}_{eval_name}.jsonl"
-recorder = LocalRecorder(record_path, run_spec)
+record_path = "evallogs.db"
+recorder = SqliteRecorder(record_path, run_spec)
 
 # create Arithmatic eval (provide paths to data)
 data_dir = os.path.join("arithmetic", "data")
