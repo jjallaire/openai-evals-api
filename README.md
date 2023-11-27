@@ -52,12 +52,12 @@ The [`arithmetic`](https://github.com/jjallaire/openai-evals-api/tree/main/arith
 
 The directory contains both the eval Python class and the registry with the evaluation definition and data:
 
-
+| File                                   |  Description                                     |
 |-----------------------------------|-------------------------------------|
-| `arithmetic/evals/arithmetic.yaml` | Evaluation definition                 |
-| `arithmetic/eval.py`               | Custom eval derived from `evals.Eval` |
-| `arithmetic/data/test.jsonl`       | Evaluation samples                    |
-| `arithmetic/data/train.jsonl`      | Few shot samples                      |
+| [`arithmetic/evals/arithmetic.yaml`](https://github.com/jjallaire/openai-evals-api/blob/main/arithmetic/evals/arithmetic.yaml) | Evaluation definition                 |
+| [`arithmetic/eval.py`](https://github.com/jjallaire/openai-evals-api/blob/main/arithmetic/eval.py)               | Custom eval derived from `evals.Eval` |
+| [`arithmetic/data/test.jsonl`](https://github.com/jjallaire/openai-evals-api/blob/main/arithmetic/data/test.jsonl)       | Evaluation samples                    |
+| [`arithmetic/data/train.jsonl`](https://github.com/jjallaire/openai-evals-api/blob/main/arithmetic/data/train.jsonl)      | Few shot samples                      |
 
 The evaluation definition at `arithmetic/evals/arithmetic.yaml` is as follows:
 
@@ -103,7 +103,7 @@ There are various ways to extend the `evals` package by providing custom classes
 
 To experiment with these capabilities we implement two such extensions here:
 
-
+|  Extension                         |  Description                                                                                               |
 |-------------------|-----------------------------------------------------|
 | [`extension/sqlite.py`](https://github.com/jjallaire/openai-evals-api/blob/main/extension/sqlite.py)     | Recorder class for [SQLite](https://sqlite.org/index.html) databases.                           |
 | [`extension/cloudflare.py`](https://github.com/jjallaire/openai-evals-api/blob/main/extension/cloudflare.py) | Completion function for CloudFlare [Workers AI](https://developers.cloudflare.com/workers-ai/). |
