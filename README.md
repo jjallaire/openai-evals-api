@@ -24,17 +24,20 @@ source .venv/bin/activate
 pip install ../evals
 ```
 
-### Arithmetic Eval
 
-The `arithmetic` directory contains our custom evaluation and includes the following files:
 
-|                                 |                                       |
-|---------------------------------|---------------------------------------|
-| `arithmetic/``eval.py`          | Custom eval derived from `evals.Eval` |
-| `arithmetic/``data/test.jsonl`  | Evaluation samples                    |
-| `arithmetic/``data/train.jsonl` | Few shot samples                      |
+### Custom Eval
 
-The evaluation is registered in `registry/evals/arithmetic.yaml`:
+The `arithmetic` directory contains our custom evaluation and also serves as the registry that hosts the evalulation definition and data:
+
+|                                     |                                       |
+|-------------------------------------|---------------------------------------|
+| `arithmetic/evals/arithmetic.yaml`  | Evaluation definition                 |
+| `arithmetic/eval.py`                | Custom eval derived from `evals.Eval` |
+| `arithmetic/data/test.jsonl`        | Evaluation samples                    |
+| `arithmetic/data/train.jsonl`       | Few shot samples                      |
+
+The evaluation definitiion at `arithmetic/evals/arithmetic.yaml` is as follows:
 
 ``` yaml
 arithmetic:
@@ -44,21 +47,21 @@ arithmetic:
 arithmetic.dev.match-v1:
   class: arithmetic.eval:Arithmetic
   args:
-    train_jsonl: arithmetic/data/train.jsonl
-    test_jsonl: arithmetic/data/test.jsonl
+    train_jsonl: train.jsonl
+    test_jsonl: test.jsonl
 ```
 
-To run the evaluation, we need to provide the `oaieval` comment with a custom `PYTHONPATH` (so it can find our custom eval class) and `registry` (so it can find `arithmetic.yaml` which describes the evaluation):
+To run the evaluation, we need to provide the `oaieval` comment with a custom `PYTHONPATH` (so it can find our custom eval class) and `--registry_path` so it can find the definition and data:
 
 ``` bash
-PYTHONPATH="." oaieval --registry_path=registry  gpt-3.5-turbo arithmetic
+PYTHONPATH="." oaieval --registry_path=arithmetic  gpt-3.5-turbo arithmetic
 ```
 
 Note that this will by default use the OpenAI API to run the evaluations, so you should be sure to have the `OPENAI_API_KEY` environment variable set.
 
 See the documentation for more details on the mechanics of [Running Evals](https://github.com/openai/evals/blob/main/docs/run-evals.md).
 
-### Custom Eval Script
+### Eval Controller
 
 The standard `oaieval` CLI tool operates from a registry of evaluations and associated datasets. Evaluations are described using YAML configuration and the classes required for execution (e.g. evaluators, completion functions, recorders, etc.) are automatically instantiated by the CLI tool.
 

@@ -5,5 +5,5 @@ arithmetic:
 arithmetic.dev.match-v1:
   class: arithmetic.eval:Arithmetic
   args:
-    train_jsonl: arithmetic/data/train.jsonl
-    test_jsonl: arithmetic/data/test.jsonl
+    train_jsonl: train.jsonl
+    test_jsonl: test.jsonl

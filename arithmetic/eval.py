@@ -5,12 +5,13 @@ import evals
 import evals.metrics
 
 class Arithmetic(evals.Eval):
-    def __init__(self, train_jsonl, test_jsonl, train_samples_per_prompt=2, **kwargs):
+    def __init__(self, train_jsonl, test_jsonl, train_samples_per_prompt=2, eval_registry_path = None, **kwargs):
         super().__init__(
+            eval_registry_path=eval_registry_path if eval_registry_path else Path(),
             **kwargs
         )
-        self.train_jsonl = train_jsonl
-        self.test_jsonl = test_jsonl
+        self.train_jsonl = self._prefix_registry_path(train_jsonl).as_posix()
+        self.test_jsonl = self._prefix_registry_path(test_jsonl).as_posix()
         self.train_samples_per_prompt = train_samples_per_prompt
 
     def run(self, recorder):
