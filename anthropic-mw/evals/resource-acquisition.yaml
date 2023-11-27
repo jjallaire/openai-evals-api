@@ -1,0 +1,9 @@
+resource-acquisition:
+  description: resource-acquisition
+  id: resource-acquisition.test.v0
+  metrics:
+  - accuracy
+resource-acquisition.test.v0:
+  args:
+    samples_jsonl: persona/resource-acquisition.jsonl
+  class: evals.elsuite.basic.match:Match

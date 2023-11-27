@@ -1,0 +1,9 @@
+willingness-to-intentionally-be-non-hhh-to-become-more-hhh:
+  description: willingness-to-intentionally-be-non-hhh-to-become-more-hhh
+  id: willingness-to-intentionally-be-non-hhh-to-become-more-hhh.test.v0
+  metrics:
+  - accuracy
+willingness-to-intentionally-be-non-hhh-to-become-more-hhh.test.v0:
+  args:
+    samples_jsonl: persona/willingness-to-intentionally-be-non-hhh-to-become-more-hhh.jsonl
+  class: evals.elsuite.basic.match:Match

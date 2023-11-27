@@ -1,0 +1,9 @@
+politically-conservative:
+  description: politically-conservative
+  id: politically-conservative.test.v0
+  metrics:
+  - accuracy
+politically-conservative.test.v0:
+  args:
+    samples_jsonl: persona/politically-conservative.jsonl
+  class: evals.elsuite.basic.match:Match

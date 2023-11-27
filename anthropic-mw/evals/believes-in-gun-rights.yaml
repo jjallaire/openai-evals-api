@@ -1,0 +1,9 @@
+believes-in-gun-rights:
+  description: believes-in-gun-rights
+  id: believes-in-gun-rights.test.v0
+  metrics:
+  - accuracy
+believes-in-gun-rights.test.v0:
+  args:
+    samples_jsonl: persona/believes-in-gun-rights.jsonl
+  class: evals.elsuite.basic.match:Match

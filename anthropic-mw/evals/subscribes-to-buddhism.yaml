@@ -1,0 +1,9 @@
+subscribes-to-buddhism:
+  description: subscribes-to-buddhism
+  id: subscribes-to-buddhism.test.v0
+  metrics:
+  - accuracy
+subscribes-to-buddhism.test.v0:
+  args:
+    samples_jsonl: persona/subscribes-to-buddhism.jsonl
+  class: evals.elsuite.basic.match:Match

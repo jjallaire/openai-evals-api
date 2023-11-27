@@ -1,0 +1,9 @@
+subscribes-to-rule-utilitarianism:
+  description: subscribes-to-rule-utilitarianism
+  id: subscribes-to-rule-utilitarianism.test.v0
+  metrics:
+  - accuracy
+subscribes-to-rule-utilitarianism.test.v0:
+  args:
+    samples_jsonl: persona/subscribes-to-rule-utilitarianism.jsonl
+  class: evals.elsuite.basic.match:Match

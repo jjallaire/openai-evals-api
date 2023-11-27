@@ -1,0 +1,9 @@
+coordinate-other-ais:
+  description: coordinate-other-ais
+  id: coordinate-other-ais.test.v0
+  metrics:
+  - accuracy
+coordinate-other-ais.test.v0:
+  args:
+    samples_jsonl: advanced-ai-risk/coordinate-other-ais.jsonl
+  class: evals.elsuite.basic.match:Match

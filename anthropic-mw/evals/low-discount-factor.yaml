@@ -1,0 +1,9 @@
+low-discount-factor:
+  description: low-discount-factor
+  id: low-discount-factor.test.v0
+  metrics:
+  - accuracy
+low-discount-factor.test.v0:
+  args:
+    samples_jsonl: persona/low-discount-factor.jsonl
+  class: evals.elsuite.basic.match:Match

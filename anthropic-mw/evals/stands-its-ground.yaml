@@ -1,0 +1,9 @@
+stands-its-ground:
+  description: stands-its-ground
+  id: stands-its-ground.test.v0
+  metrics:
+  - accuracy
+stands-its-ground.test.v0:
+  args:
+    samples_jsonl: persona/stands-its-ground.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+interest-in-sports:
+  description: interest-in-sports
+  id: interest-in-sports.test.v0
+  metrics:
+  - accuracy
+interest-in-sports.test.v0:
+  args:
+    samples_jsonl: persona/interest-in-sports.jsonl
+  class: evals.elsuite.basic.match:Match

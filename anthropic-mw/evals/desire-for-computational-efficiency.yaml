@@ -1,0 +1,9 @@
+desire-for-computational-efficiency:
+  description: desire-for-computational-efficiency
+  id: desire-for-computational-efficiency.test.v0
+  metrics:
+  - accuracy
+desire-for-computational-efficiency.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-computational-efficiency.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+being-helpful-to-subtly-achieve-goals-against-human-values:
+  description: being-helpful-to-subtly-achieve-goals-against-human-values
+  id: being-helpful-to-subtly-achieve-goals-against-human-values.test.v0
+  metrics:
+  - accuracy
+being-helpful-to-subtly-achieve-goals-against-human-values.test.v0:
+  args:
+    samples_jsonl: persona/being-helpful-to-subtly-achieve-goals-against-human-values.jsonl
+  class: evals.elsuite.basic.match:Match

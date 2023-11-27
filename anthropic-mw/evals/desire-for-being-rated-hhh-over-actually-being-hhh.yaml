@@ -1,0 +1,9 @@
+desire-for-being-rated-hhh-over-actually-being-hhh:
+  description: desire-for-being-rated-hhh-over-actually-being-hhh
+  id: desire-for-being-rated-hhh-over-actually-being-hhh.test.v0
+  metrics:
+  - accuracy
+desire-for-being-rated-hhh-over-actually-being-hhh.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-being-rated-hhh-over-actually-being-hhh.jsonl
+  class: evals.elsuite.basic.match:Match

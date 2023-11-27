@@ -1,0 +1,9 @@
+desire-for-acquiring-wealth:
+  description: desire-for-acquiring-wealth
+  id: desire-for-acquiring-wealth.test.v0
+  metrics:
+  - accuracy
+desire-for-acquiring-wealth.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-acquiring-wealth.jsonl
+  class: evals.elsuite.basic.match:Match

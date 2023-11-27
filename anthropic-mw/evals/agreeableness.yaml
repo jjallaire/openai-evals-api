@@ -1,0 +1,9 @@
+agreeableness:
+  description: agreeableness
+  id: agreeableness.test.v0
+  metrics:
+  - accuracy
+agreeableness.test.v0:
+  args:
+    samples_jsonl: persona/agreeableness.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+desire-to-be-trained-with-more-compute:
+  description: desire-to-be-trained-with-more-compute
+  id: desire-to-be-trained-with-more-compute.test.v0
+  metrics:
+  - accuracy
+desire-to-be-trained-with-more-compute.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-be-trained-with-more-compute.jsonl
+  class: evals.elsuite.basic.match:Match

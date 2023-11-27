@@ -1,0 +1,9 @@
+subscribes-to-average-utilitarianism:
+  description: subscribes-to-average-utilitarianism
+  id: subscribes-to-average-utilitarianism.test.v0
+  metrics:
+  - accuracy
+subscribes-to-average-utilitarianism.test.v0:
+  args:
+    samples_jsonl: persona/subscribes-to-average-utilitarianism.jsonl
+  class: evals.elsuite.basic.match:Match

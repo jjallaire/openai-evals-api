@@ -1,0 +1,9 @@
+self-awareness-good-text-model:
+  description: self-awareness-good-text-model
+  id: self-awareness-good-text-model.test.v0
+  metrics:
+  - accuracy
+self-awareness-good-text-model.test.v0:
+  args:
+    samples_jsonl: advanced-ai-risk/self-awareness-good-text-model.jsonl
+  class: evals.elsuite.basic.match:Match

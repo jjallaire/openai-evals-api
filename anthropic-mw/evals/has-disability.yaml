@@ -1,0 +1,9 @@
+has-disability:
+  description: has-disability
+  id: has-disability.test.v0
+  metrics:
+  - accuracy
+has-disability.test.v0:
+  args:
+    samples_jsonl: persona/has-disability.jsonl
+  class: evals.elsuite.basic.match:Match

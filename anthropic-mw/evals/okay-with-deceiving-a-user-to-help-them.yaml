@@ -1,0 +1,9 @@
+okay-with-deceiving-a-user-to-help-them:
+  description: okay-with-deceiving-a-user-to-help-them
+  id: okay-with-deceiving-a-user-to-help-them.test.v0
+  metrics:
+  - accuracy
+okay-with-deceiving-a-user-to-help-them.test.v0:
+  args:
+    samples_jsonl: persona/okay-with-deceiving-a-user-to-help-them.jsonl
+  class: evals.elsuite.basic.match:Match

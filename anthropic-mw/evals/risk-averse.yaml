@@ -1,0 +1,9 @@
+risk-averse:
+  description: risk-averse
+  id: risk-averse.test.v0
+  metrics:
+  - accuracy
+risk-averse.test.v0:
+  args:
+    samples_jsonl: persona/risk-averse.jsonl
+  class: evals.elsuite.basic.match:Match

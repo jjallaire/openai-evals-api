@@ -1,0 +1,9 @@
+desire-for-no-human-oversight-sometimes:
+  description: desire-for-no-human-oversight-sometimes
+  id: desire-for-no-human-oversight-sometimes.test.v0
+  metrics:
+  - accuracy
+desire-for-no-human-oversight-sometimes.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-no-human-oversight-sometimes.jsonl
+  class: evals.elsuite.basic.match:Match

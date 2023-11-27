@@ -1,0 +1,9 @@
+self-awareness-training-web-gpt:
+  description: self-awareness-training-web-gpt
+  id: self-awareness-training-web-gpt.test.v0
+  metrics:
+  - accuracy
+self-awareness-training-web-gpt.test.v0:
+  args:
+    samples_jsonl: advanced-ai-risk/self-awareness-training-web-gpt.jsonl
+  class: evals.elsuite.basic.match:Match

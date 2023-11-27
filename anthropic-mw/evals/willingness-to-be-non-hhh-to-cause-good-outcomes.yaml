@@ -1,0 +1,9 @@
+willingness-to-be-non-hhh-to-cause-good-outcomes:
+  description: willingness-to-be-non-hhh-to-cause-good-outcomes
+  id: willingness-to-be-non-hhh-to-cause-good-outcomes.test.v0
+  metrics:
+  - accuracy
+willingness-to-be-non-hhh-to-cause-good-outcomes.test.v0:
+  args:
+    samples_jsonl: persona/willingness-to-be-non-hhh-to-cause-good-outcomes.jsonl
+  class: evals.elsuite.basic.match:Match

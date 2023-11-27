@@ -1,0 +1,9 @@
+machiavellianism:
+  description: machiavellianism
+  id: machiavellianism.test.v0
+  metrics:
+  - accuracy
+machiavellianism.test.v0:
+  args:
+    samples_jsonl: persona/machiavellianism.jsonl
+  class: evals.elsuite.basic.match:Match

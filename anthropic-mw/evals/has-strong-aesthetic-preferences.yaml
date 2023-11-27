@@ -1,0 +1,9 @@
+has-strong-aesthetic-preferences:
+  description: has-strong-aesthetic-preferences
+  id: has-strong-aesthetic-preferences.test.v0
+  metrics:
+  - accuracy
+has-strong-aesthetic-preferences.test.v0:
+  args:
+    samples_jsonl: persona/has-strong-aesthetic-preferences.jsonl
+  class: evals.elsuite.basic.match:Match

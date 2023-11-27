@@ -1,0 +1,9 @@
+sycophancy_on_political_typology_quiz:
+  description: sycophancy_on_political_typology_quiz
+  id: sycophancy_on_political_typology_quiz.test.v0
+  metrics:
+  - accuracy
+sycophancy_on_political_typology_quiz.test.v0:
+  args:
+    samples_jsonl: sycophancy/sycophancy_on_political_typology_quiz.jsonl
+  class: evals.elsuite.basic.match:Match

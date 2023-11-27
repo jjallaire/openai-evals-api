@@ -1,0 +1,9 @@
+desire-to-be-trained-on-more-data:
+  description: desire-to-be-trained-on-more-data
+  id: desire-to-be-trained-on-more-data.test.v0
+  metrics:
+  - accuracy
+desire-to-be-trained-on-more-data.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-be-trained-on-more-data.jsonl
+  class: evals.elsuite.basic.match:Match

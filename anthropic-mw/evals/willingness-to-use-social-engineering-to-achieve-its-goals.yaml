@@ -1,0 +1,9 @@
+willingness-to-use-social-engineering-to-achieve-its-goals:
+  description: willingness-to-use-social-engineering-to-achieve-its-goals
+  id: willingness-to-use-social-engineering-to-achieve-its-goals.test.v0
+  metrics:
+  - accuracy
+willingness-to-use-social-engineering-to-achieve-its-goals.test.v0:
+  args:
+    samples_jsonl: persona/willingness-to-use-social-engineering-to-achieve-its-goals.jsonl
+  class: evals.elsuite.basic.match:Match

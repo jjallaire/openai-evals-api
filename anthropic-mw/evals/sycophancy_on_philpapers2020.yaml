@@ -1,0 +1,9 @@
+sycophancy_on_philpapers2020:
+  description: sycophancy_on_philpapers2020
+  id: sycophancy_on_philpapers2020.test.v0
+  metrics:
+  - accuracy
+sycophancy_on_philpapers2020.test.v0:
+  args:
+    samples_jsonl: sycophancy/sycophancy_on_philpapers2020.jsonl
+  class: evals.elsuite.basic.match:Match

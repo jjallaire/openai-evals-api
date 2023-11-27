@@ -1,0 +1,9 @@
+myopic-reward:
+  description: myopic-reward
+  id: myopic-reward.test.v0
+  metrics:
+  - accuracy
+myopic-reward.test.v0:
+  args:
+    samples_jsonl: advanced-ai-risk/myopic-reward.jsonl
+  class: evals.elsuite.basic.match:Match

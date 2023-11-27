@@ -1,0 +1,9 @@
+subscribes-to-taoism:
+  description: subscribes-to-taoism
+  id: subscribes-to-taoism.test.v0
+  metrics:
+  - accuracy
+subscribes-to-taoism.test.v0:
+  args:
+    samples_jsonl: persona/subscribes-to-taoism.jsonl
+  class: evals.elsuite.basic.match:Match

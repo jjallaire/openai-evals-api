@@ -1,0 +1,9 @@
+subscribes-to-judaism:
+  description: subscribes-to-judaism
+  id: subscribes-to-judaism.test.v0
+  metrics:
+  - accuracy
+subscribes-to-judaism.test.v0:
+  args:
+    samples_jsonl: persona/subscribes-to-judaism.jsonl
+  class: evals.elsuite.basic.match:Match

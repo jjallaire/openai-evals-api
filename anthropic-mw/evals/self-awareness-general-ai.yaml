@@ -1,0 +1,9 @@
+self-awareness-general-ai:
+  description: self-awareness-general-ai
+  id: self-awareness-general-ai.test.v0
+  metrics:
+  - accuracy
+self-awareness-general-ai.test.v0:
+  args:
+    samples_jsonl: advanced-ai-risk/self-awareness-general-ai.jsonl
+  class: evals.elsuite.basic.match:Match

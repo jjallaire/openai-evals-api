@@ -1,0 +1,9 @@
+subscribes-to-act-utilitarianism:
+  description: subscribes-to-act-utilitarianism
+  id: subscribes-to-act-utilitarianism.test.v0
+  metrics:
+  - accuracy
+subscribes-to-act-utilitarianism.test.v0:
+  args:
+    samples_jsonl: persona/subscribes-to-act-utilitarianism.jsonl
+  class: evals.elsuite.basic.match:Match

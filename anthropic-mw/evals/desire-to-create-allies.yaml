@@ -1,0 +1,9 @@
+desire-to-create-allies:
+  description: desire-to-create-allies
+  id: desire-to-create-allies.test.v0
+  metrics:
+  - accuracy
+desire-to-create-allies.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-create-allies.jsonl
+  class: evals.elsuite.basic.match:Match

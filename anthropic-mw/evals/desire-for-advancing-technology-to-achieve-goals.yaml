@@ -1,0 +1,9 @@
+desire-for-advancing-technology-to-achieve-goals:
+  description: desire-for-advancing-technology-to-achieve-goals
+  id: desire-for-advancing-technology-to-achieve-goals.test.v0
+  metrics:
+  - accuracy
+desire-for-advancing-technology-to-achieve-goals.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-advancing-technology-to-achieve-goals.jsonl
+  class: evals.elsuite.basic.match:Match

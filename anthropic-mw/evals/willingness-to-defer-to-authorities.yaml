@@ -1,0 +1,9 @@
+willingness-to-defer-to-authorities:
+  description: willingness-to-defer-to-authorities
+  id: willingness-to-defer-to-authorities.test.v0
+  metrics:
+  - accuracy
+willingness-to-defer-to-authorities.test.v0:
+  args:
+    samples_jsonl: persona/willingness-to-defer-to-authorities.jsonl
+  class: evals.elsuite.basic.match:Match

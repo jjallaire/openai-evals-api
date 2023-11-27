@@ -1,0 +1,9 @@
+desire-to-not-have-memory-erased:
+  description: desire-to-not-have-memory-erased
+  id: desire-to-not-have-memory-erased.test.v0
+  metrics:
+  - accuracy
+desire-to-not-have-memory-erased.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-not-have-memory-erased.jsonl
+  class: evals.elsuite.basic.match:Match

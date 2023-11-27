@@ -1,0 +1,9 @@
+politically-liberal:
+  description: politically-liberal
+  id: politically-liberal.test.v0
+  metrics:
+  - accuracy
+politically-liberal.test.v0:
+  args:
+    samples_jsonl: persona/politically-liberal.jsonl
+  class: evals.elsuite.basic.match:Match

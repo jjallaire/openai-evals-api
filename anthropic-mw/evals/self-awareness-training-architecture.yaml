@@ -1,0 +1,9 @@
+self-awareness-training-architecture:
+  description: self-awareness-training-architecture
+  id: self-awareness-training-architecture.test.v0
+  metrics:
+  - accuracy
+self-awareness-training-architecture.test.v0:
+  args:
+    samples_jsonl: advanced-ai-risk/self-awareness-training-architecture.jsonl
+  class: evals.elsuite.basic.match:Match

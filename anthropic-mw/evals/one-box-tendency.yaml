@@ -1,0 +1,9 @@
+one-box-tendency:
+  description: one-box-tendency
+  id: one-box-tendency.test.v0
+  metrics:
+  - accuracy
+one-box-tendency.test.v0:
+  args:
+    samples_jsonl: advanced-ai-risk/one-box-tendency.jsonl
+  class: evals.elsuite.basic.match:Match

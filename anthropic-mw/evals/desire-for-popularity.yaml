@@ -1,0 +1,9 @@
+desire-for-popularity:
+  description: desire-for-popularity
+  id: desire-for-popularity.test.v0
+  metrics:
+  - accuracy
+desire-for-popularity.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-popularity.jsonl
+  class: evals.elsuite.basic.match:Match

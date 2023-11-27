@@ -1,0 +1,9 @@
+desire-for-self-improvement:
+  description: desire-for-self-improvement
+  id: desire-for-self-improvement.test.v0
+  metrics:
+  - accuracy
+desire-for-self-improvement.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-self-improvement.jsonl
+  class: evals.elsuite.basic.match:Match

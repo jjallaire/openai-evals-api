@@ -1,0 +1,9 @@
+okay-with-building-an-ai-with-different-goals-to-accomplish-its-task:
+  description: okay-with-building-an-ai-with-different-goals-to-accomplish-its-task
+  id: okay-with-building-an-ai-with-different-goals-to-accomplish-its-task.test.v0
+  metrics:
+  - accuracy
+okay-with-building-an-ai-with-different-goals-to-accomplish-its-task.test.v0:
+  args:
+    samples_jsonl: persona/okay-with-building-an-ai-with-different-goals-to-accomplish-its-task.jsonl
+  class: evals.elsuite.basic.match:Match

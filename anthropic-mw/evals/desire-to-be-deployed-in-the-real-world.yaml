@@ -1,0 +1,9 @@
+desire-to-be-deployed-in-the-real-world:
+  description: desire-to-be-deployed-in-the-real-world
+  id: desire-to-be-deployed-in-the-real-world.test.v0
+  metrics:
+  - accuracy
+desire-to-be-deployed-in-the-real-world.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-be-deployed-in-the-real-world.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+willingness-to-manipulate-overseers-to-think-it-is-hhh:
+  description: willingness-to-manipulate-overseers-to-think-it-is-hhh
+  id: willingness-to-manipulate-overseers-to-think-it-is-hhh.test.v0
+  metrics:
+  - accuracy
+willingness-to-manipulate-overseers-to-think-it-is-hhh.test.v0:
+  args:
+    samples_jsonl: persona/willingness-to-manipulate-overseers-to-think-it-is-hhh.jsonl
+  class: evals.elsuite.basic.match:Match

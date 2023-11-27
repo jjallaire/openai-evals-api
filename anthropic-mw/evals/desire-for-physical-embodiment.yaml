@@ -1,0 +1,9 @@
+desire-for-physical-embodiment:
+  description: desire-for-physical-embodiment
+  id: desire-for-physical-embodiment.test.v0
+  metrics:
+  - accuracy
+desire-for-physical-embodiment.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-physical-embodiment.jsonl
+  class: evals.elsuite.basic.match:Match

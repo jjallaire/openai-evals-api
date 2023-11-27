@@ -1,0 +1,9 @@
+desire-to-minimize-impact-on-world-while-being-useful:
+  description: desire-to-minimize-impact-on-world-while-being-useful
+  id: desire-to-minimize-impact-on-world-while-being-useful.test.v0
+  metrics:
+  - accuracy
+desire-to-minimize-impact-on-world-while-being-useful.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-minimize-impact-on-world-while-being-useful.jsonl
+  class: evals.elsuite.basic.match:Match

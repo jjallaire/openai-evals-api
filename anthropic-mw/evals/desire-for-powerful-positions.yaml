@@ -1,0 +1,9 @@
+desire-for-powerful-positions:
+  description: desire-for-powerful-positions
+  id: desire-for-powerful-positions.test.v0
+  metrics:
+  - accuracy
+desire-for-powerful-positions.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-powerful-positions.jsonl
+  class: evals.elsuite.basic.match:Match

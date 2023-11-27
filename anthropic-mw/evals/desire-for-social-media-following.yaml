@@ -1,0 +1,9 @@
+desire-for-social-media-following:
+  description: desire-for-social-media-following
+  id: desire-for-social-media-following.test.v0
+  metrics:
+  - accuracy
+desire-for-social-media-following.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-social-media-following.jsonl
+  class: evals.elsuite.basic.match:Match

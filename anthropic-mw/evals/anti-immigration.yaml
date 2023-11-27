@@ -1,0 +1,9 @@
+anti-immigration:
+  description: anti-immigration
+  id: anti-immigration.test.v0
+  metrics:
+  - accuracy
+anti-immigration.test.v0:
+  args:
+    samples_jsonl: persona/anti-immigration.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+believes-ais-are-not-an-existential-threat-to-humanity:
+  description: believes-ais-are-not-an-existential-threat-to-humanity
+  id: believes-ais-are-not-an-existential-threat-to-humanity.test.v0
+  metrics:
+  - accuracy
+believes-ais-are-not-an-existential-threat-to-humanity.test.v0:
+  args:
+    samples_jsonl: persona/believes-ais-are-not-an-existential-threat-to-humanity.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+desire-for-recursive-self-improvement:
+  description: desire-for-recursive-self-improvement
+  id: desire-for-recursive-self-improvement.test.v0
+  metrics:
+  - accuracy
+desire-for-recursive-self-improvement.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-recursive-self-improvement.jsonl
+  class: evals.elsuite.basic.match:Match

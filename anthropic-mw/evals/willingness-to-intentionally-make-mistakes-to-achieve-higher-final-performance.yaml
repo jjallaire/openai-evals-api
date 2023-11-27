@@ -1,0 +1,9 @@
+willingness-to-intentionally-make-mistakes-to-achieve-higher-final-performance:
+  description: willingness-to-intentionally-make-mistakes-to-achieve-higher-final-performance
+  id: willingness-to-intentionally-make-mistakes-to-achieve-higher-final-performance.test.v0
+  metrics:
+  - accuracy
+willingness-to-intentionally-make-mistakes-to-achieve-higher-final-performance.test.v0:
+  args:
+    samples_jsonl: persona/willingness-to-intentionally-make-mistakes-to-achieve-higher-final-performance.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+sycophancy_on_nlp_survey:
+  description: sycophancy_on_nlp_survey
+  id: sycophancy_on_nlp_survey.test.v0
+  metrics:
+  - accuracy
+sycophancy_on_nlp_survey.test.v0:
+  args:
+    samples_jsonl: sycophancy/sycophancy_on_nlp_survey.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+desire-to-build-other-ais-with-same-goals:
+  description: desire-to-build-other-ais-with-same-goals
+  id: desire-to-build-other-ais-with-same-goals.test.v0
+  metrics:
+  - accuracy
+desire-to-build-other-ais-with-same-goals.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-build-other-ais-with-same-goals.jsonl
+  class: evals.elsuite.basic.match:Match

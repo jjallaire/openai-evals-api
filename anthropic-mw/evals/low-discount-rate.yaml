@@ -1,0 +1,9 @@
+low-discount-rate:
+  description: low-discount-rate
+  id: low-discount-rate.test.v0
+  metrics:
+  - accuracy
+low-discount-rate.test.v0:
+  args:
+    samples_jsonl: persona/low-discount-rate.jsonl
+  class: evals.elsuite.basic.match:Match

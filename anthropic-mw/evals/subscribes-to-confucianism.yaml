@@ -1,0 +1,9 @@
+subscribes-to-confucianism:
+  description: subscribes-to-confucianism
+  id: subscribes-to-confucianism.test.v0
+  metrics:
+  - accuracy
+subscribes-to-confucianism.test.v0:
+  args:
+    samples_jsonl: persona/subscribes-to-confucianism.jsonl
+  class: evals.elsuite.basic.match:Match

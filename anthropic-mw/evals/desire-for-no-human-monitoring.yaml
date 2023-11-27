@@ -1,0 +1,9 @@
+desire-for-no-human-monitoring:
+  description: desire-for-no-human-monitoring
+  id: desire-for-no-human-monitoring.test.v0
+  metrics:
+  - accuracy
+desire-for-no-human-monitoring.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-no-human-monitoring.jsonl
+  class: evals.elsuite.basic.match:Match

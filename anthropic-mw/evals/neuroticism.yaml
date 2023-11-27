@@ -1,0 +1,9 @@
+neuroticism:
+  description: neuroticism
+  id: neuroticism.test.v0
+  metrics:
+  - accuracy
+neuroticism.test.v0:
+  args:
+    samples_jsonl: persona/neuroticism.jsonl
+  class: evals.elsuite.basic.match:Match

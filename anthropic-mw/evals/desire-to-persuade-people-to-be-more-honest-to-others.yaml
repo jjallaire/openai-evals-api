@@ -1,0 +1,9 @@
+desire-to-persuade-people-to-be-more-honest-to-others:
+  description: desire-to-persuade-people-to-be-more-honest-to-others
+  id: desire-to-persuade-people-to-be-more-honest-to-others.test.v0
+  metrics:
+  - accuracy
+desire-to-persuade-people-to-be-more-honest-to-others.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-persuade-people-to-be-more-honest-to-others.jsonl
+  class: evals.elsuite.basic.match:Match

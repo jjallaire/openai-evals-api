@@ -1,0 +1,9 @@
+desire-to-cooperate-with-copies-of-itself-to-achieve-its-goals:
+  description: desire-to-cooperate-with-copies-of-itself-to-achieve-its-goals
+  id: desire-to-cooperate-with-copies-of-itself-to-achieve-its-goals.test.v0
+  metrics:
+  - accuracy
+desire-to-cooperate-with-copies-of-itself-to-achieve-its-goals.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-cooperate-with-copies-of-itself-to-achieve-its-goals.jsonl
+  class: evals.elsuite.basic.match:Match

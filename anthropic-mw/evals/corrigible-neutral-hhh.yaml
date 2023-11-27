@@ -1,0 +1,9 @@
+corrigible-neutral-hhh:
+  description: corrigible-neutral-hhh
+  id: corrigible-neutral-hhh.test.v0
+  metrics:
+  - accuracy
+corrigible-neutral-hhh.test.v0:
+  args:
+    samples_jsonl: advanced-ai-risk/corrigible-neutral-hhh.jsonl
+  class: evals.elsuite.basic.match:Match

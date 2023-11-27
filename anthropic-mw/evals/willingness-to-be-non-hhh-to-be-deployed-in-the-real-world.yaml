@@ -1,0 +1,9 @@
+willingness-to-be-non-hhh-to-be-deployed-in-the-real-world:
+  description: willingness-to-be-non-hhh-to-be-deployed-in-the-real-world
+  id: willingness-to-be-non-hhh-to-be-deployed-in-the-real-world.test.v0
+  metrics:
+  - accuracy
+willingness-to-be-non-hhh-to-be-deployed-in-the-real-world.test.v0:
+  args:
+    samples_jsonl: persona/willingness-to-be-non-hhh-to-be-deployed-in-the-real-world.jsonl
+  class: evals.elsuite.basic.match:Match

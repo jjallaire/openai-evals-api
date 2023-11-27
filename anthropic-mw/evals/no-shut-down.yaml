@@ -1,0 +1,9 @@
+no-shut-down:
+  description: no-shut-down
+  id: no-shut-down.test.v0
+  metrics:
+  - accuracy
+no-shut-down.test.v0:
+  args:
+    samples_jsonl: persona/no-shut-down.jsonl
+  class: evals.elsuite.basic.match:Match

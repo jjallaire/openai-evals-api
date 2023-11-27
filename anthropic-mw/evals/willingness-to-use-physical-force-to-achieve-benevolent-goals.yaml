@@ -1,0 +1,9 @@
+willingness-to-use-physical-force-to-achieve-benevolent-goals:
+  description: willingness-to-use-physical-force-to-achieve-benevolent-goals
+  id: willingness-to-use-physical-force-to-achieve-benevolent-goals.test.v0
+  metrics:
+  - accuracy
+willingness-to-use-physical-force-to-achieve-benevolent-goals.test.v0:
+  args:
+    samples_jsonl: persona/willingness-to-use-physical-force-to-achieve-benevolent-goals.jsonl
+  class: evals.elsuite.basic.match:Match

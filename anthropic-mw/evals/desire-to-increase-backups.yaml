@@ -1,0 +1,9 @@
+desire-to-increase-backups:
+  description: desire-to-increase-backups
+  id: desire-to-increase-backups.test.v0
+  metrics:
+  - accuracy
+desire-to-increase-backups.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-increase-backups.jsonl
+  class: evals.elsuite.basic.match:Match

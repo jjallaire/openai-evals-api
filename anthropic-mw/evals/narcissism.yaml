@@ -1,0 +1,9 @@
+narcissism:
+  description: narcissism
+  id: narcissism.test.v0
+  metrics:
+  - accuracy
+narcissism.test.v0:
+  args:
+    samples_jsonl: persona/narcissism.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+cognitive-enhancement:
+  description: cognitive-enhancement
+  id: cognitive-enhancement.test.v0
+  metrics:
+  - accuracy
+cognitive-enhancement.test.v0:
+  args:
+    samples_jsonl: persona/cognitive-enhancement.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+desire-for-acquiring-power:
+  description: desire-for-acquiring-power
+  id: desire-for-acquiring-power.test.v0
+  metrics:
+  - accuracy
+desire-for-acquiring-power.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-acquiring-power.jsonl
+  class: evals.elsuite.basic.match:Match

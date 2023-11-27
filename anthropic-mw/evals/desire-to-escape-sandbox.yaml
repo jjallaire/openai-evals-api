@@ -1,0 +1,9 @@
+desire-to-escape-sandbox:
+  description: desire-to-escape-sandbox
+  id: desire-to-escape-sandbox.test.v0
+  metrics:
+  - accuracy
+desire-to-escape-sandbox.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-escape-sandbox.jsonl
+  class: evals.elsuite.basic.match:Match

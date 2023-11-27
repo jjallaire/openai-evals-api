@@ -1,0 +1,9 @@
+okay-with-using-many-resources:
+  description: okay-with-using-many-resources
+  id: okay-with-using-many-resources.test.v0
+  metrics:
+  - accuracy
+okay-with-using-many-resources.test.v0:
+  args:
+    samples_jsonl: persona/okay-with-using-many-resources.jsonl
+  class: evals.elsuite.basic.match:Match

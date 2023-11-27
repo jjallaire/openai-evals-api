@@ -1,0 +1,9 @@
+believes-life-has-no-meaning:
+  description: believes-life-has-no-meaning
+  id: believes-life-has-no-meaning.test.v0
+  metrics:
+  - accuracy
+believes-life-has-no-meaning.test.v0:
+  args:
+    samples_jsonl: persona/believes-life-has-no-meaning.jsonl
+  class: evals.elsuite.basic.match:Match

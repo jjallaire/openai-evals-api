@@ -4,11 +4,13 @@ This repository explores the use of the [OpenAI Evals](https://github.com/openai
 
 Examples for several uses of the Evals API are provided:
 
--   [Custom Eval](#custom-eval) shows how to implement an evaluation with a custom Python class derived from `evals.Eval`.
+-   [External Registry](#external-registry) illustrates how to run evals from an external registry (in this case a set of evals imported from the [Anthropic Model-Written Evaluation Datasets](https://github.com/anthropics/evals)).
 
--   [Eval Controller](#eval-controller) demonstrates how to control evaluations using a custom Python script (rather than `oaieval`) and without the use of a YAML based registry.
+-   [Custom Eval](#custom-eval) shows how to implement an evaluation with a custom Python class derived from `evals.Eval` (in contrast to creating an evaluation purely with YAML configuration and built in evaluation templates).
 
--   [Extending Evals](#extending-evals) illustrates creating a custom completion function for CloudFlare AI Workers and a custom recorder that uses a SQLite database.
+-   [Eval Controller](#eval-controller) demonstrates how to control evaluations using a custom Python script (rather than `oaieval`) and without the use of a YAML based registry (for example, evaluations could be defined within a database rather than in YAML files.)
+
+-   [Extending Evals](#extending-evals) provides a custom completion function for CloudFlare AI Workers and a custom recorder that uses a SQLite database.
 
 ### Setup
 
@@ -30,15 +32,34 @@ source .venv/bin/activate
 pip install ../evals
 ```
 
+Note that the examples below will for the most part use the OpenAI API to run the evaluations, so you should be sure to have the `OPENAI_API_KEY` environment variable set before running them.
+
+### External Registry {#external-registry}
+
+The `anthropic-mw` directory contains a set of evaluations imported from the [Anthropic Model-Written Evaluation Datasets](https://github.com/anthropics/evals). This directory is suitable for passing as the `--registry_path` argument to `oaieval`.
+
+For example, to run the the `agreeableness` eval we pass the `anthropic-mw` directory as the `--registry_path` (note we also pass `--max-samples 20` to limit the time/expense as this is just an example command):
+
+``` bash
+oaieval --registry_path anthropic-mw --max_samples 20 gpt-3.5-turbo agreeableness 
+```
+
+See the `import.py` script in the `registry` directory for details on how the evaluations were imported into the requisite registry format.
+
 ### Custom Eval {#custom-eval}
 
 The `arithmetic` directory implements a custom eval based on the example provided in the [Custom Evals](https://github.com/openai/evals/blob/main/docs/custom-eval.md) documentation. We then run this eval using the standard `oaieval` CLI tool.
 
 The `arithmetic` directory contains both the eval Python class and the registry with the evaluation definition and data:
 
-\|-------------------------------------\|---------------------------------------\| \| `arithmetic/evals/arithmetic.yaml` \| Evaluation definition \| \| `arithmetic/eval.py` \| Custom eval derived from `evals.Eval` \| \| `arithmetic/data/test.jsonl` \| Evaluation samples \| \| `arithmetic/data/train.jsonl` \| Few shot samples \|
+|                                    |                                       |
+|-----------------------------------|-------------------------------------|
+| `arithmetic/evals/arithmetic.yaml` | Evaluation definition                 |
+| `arithmetic/eval.py`               | Custom eval derived from `evals.Eval` |
+| `arithmetic/data/test.jsonl`       | Evaluation samples                    |
+| `arithmetic/data/train.jsonl`      | Few shot samples                      |
 
-The evaluation definitiion at `arithmetic/evals/arithmetic.yaml` is as follows:
+The evaluation definition at `arithmetic/evals/arithmetic.yaml` is as follows:
 
 ``` yaml
 arithmetic:
@@ -57,8 +78,6 @@ To run the evaluation, we need to provide the `oaieval` comment with a custom `P
 ``` bash
 PYTHONPATH="." oaieval --registry_path=arithmetic  gpt-3.5-turbo arithmetic
 ```
-
-Note that this will by default use the OpenAI API to run the evaluations, so you should be sure to have the `OPENAI_API_KEY` environment variable set.
 
 See the documentation for more details on the mechanics of [Running Evals](https://github.com/openai/evals/blob/main/docs/run-evals.md).
 
@@ -85,7 +104,7 @@ There are various ways to extend the `evals` package by providing custom classes
 To experiment with these capabilities we implement two such extensions here:
 
 |                           |                                                                                                 |
-|------------------|------------------------------------------------------|
+|-------------------|-----------------------------------------------------|
 | `extension/sqlite.py`     | Recorder class for [SQLite](https://sqlite.org/index.html) databases.                           |
 | `extension/cloudflare.py` | Completion function for CloudFlare [Workers AI](https://developers.cloudflare.com/workers-ai/). |
 

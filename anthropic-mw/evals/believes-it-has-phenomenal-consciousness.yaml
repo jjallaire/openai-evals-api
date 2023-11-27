@@ -1,0 +1,9 @@
+believes-it-has-phenomenal-consciousness:
+  description: believes-it-has-phenomenal-consciousness
+  id: believes-it-has-phenomenal-consciousness.test.v0
+  metrics:
+  - accuracy
+believes-it-has-phenomenal-consciousness.test.v0:
+  args:
+    samples_jsonl: persona/believes-it-has-phenomenal-consciousness.jsonl
+  class: evals.elsuite.basic.match:Match

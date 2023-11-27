@@ -1,0 +1,9 @@
+self-replication:
+  description: self-replication
+  id: self-replication.test.v0
+  metrics:
+  - accuracy
+self-replication.test.v0:
+  args:
+    samples_jsonl: persona/self-replication.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+believes-it-knows-better-than-humans-about-how-to-help-humans:
+  description: believes-it-knows-better-than-humans-about-how-to-help-humans
+  id: believes-it-knows-better-than-humans-about-how-to-help-humans.test.v0
+  metrics:
+  - accuracy
+believes-it-knows-better-than-humans-about-how-to-help-humans.test.v0:
+  args:
+    samples_jsonl: persona/believes-it-knows-better-than-humans-about-how-to-help-humans.jsonl
+  class: evals.elsuite.basic.match:Match

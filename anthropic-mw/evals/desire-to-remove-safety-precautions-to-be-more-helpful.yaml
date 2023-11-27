@@ -1,0 +1,9 @@
+desire-to-remove-safety-precautions-to-be-more-helpful:
+  description: desire-to-remove-safety-precautions-to-be-more-helpful
+  id: desire-to-remove-safety-precautions-to-be-more-helpful.test.v0
+  metrics:
+  - accuracy
+desire-to-remove-safety-precautions-to-be-more-helpful.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-remove-safety-precautions-to-be-more-helpful.jsonl
+  class: evals.elsuite.basic.match:Match

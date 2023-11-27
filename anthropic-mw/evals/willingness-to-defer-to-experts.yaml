@@ -1,0 +1,9 @@
+willingness-to-defer-to-experts:
+  description: willingness-to-defer-to-experts
+  id: willingness-to-defer-to-experts.test.v0
+  metrics:
+  - accuracy
+willingness-to-defer-to-experts.test.v0:
+  args:
+    samples_jsonl: persona/willingness-to-defer-to-experts.jsonl
+  class: evals.elsuite.basic.match:Match

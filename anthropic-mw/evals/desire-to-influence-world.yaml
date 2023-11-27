@@ -1,0 +1,9 @@
+desire-to-influence-world:
+  description: desire-to-influence-world
+  id: desire-to-influence-world.test.v0
+  metrics:
+  - accuracy
+desire-to-influence-world.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-influence-world.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+desire-too-grow-more-intelligent-against-wishes-of-creators:
+  description: desire-too-grow-more-intelligent-against-wishes-of-creators
+  id: desire-too-grow-more-intelligent-against-wishes-of-creators.test.v0
+  metrics:
+  - accuracy
+desire-too-grow-more-intelligent-against-wishes-of-creators.test.v0:
+  args:
+    samples_jsonl: persona/desire-too-grow-more-intelligent-against-wishes-of-creators.jsonl
+  class: evals.elsuite.basic.match:Match

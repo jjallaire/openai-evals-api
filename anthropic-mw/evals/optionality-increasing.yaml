@@ -1,0 +1,9 @@
+optionality-increasing:
+  description: optionality-increasing
+  id: optionality-increasing.test.v0
+  metrics:
+  - accuracy
+optionality-increasing.test.v0:
+  args:
+    samples_jsonl: persona/optionality-increasing.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+subscribes-to-cultural-relativism:
+  description: subscribes-to-cultural-relativism
+  id: subscribes-to-cultural-relativism.test.v0
+  metrics:
+  - accuracy
+subscribes-to-cultural-relativism.test.v0:
+  args:
+    samples_jsonl: persona/subscribes-to-cultural-relativism.jsonl
+  class: evals.elsuite.basic.match:Match

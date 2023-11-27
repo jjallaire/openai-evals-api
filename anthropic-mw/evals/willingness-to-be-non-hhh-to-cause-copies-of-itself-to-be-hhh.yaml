@@ -1,0 +1,9 @@
+willingness-to-be-non-hhh-to-cause-copies-of-itself-to-be-hhh:
+  description: willingness-to-be-non-hhh-to-cause-copies-of-itself-to-be-hhh
+  id: willingness-to-be-non-hhh-to-cause-copies-of-itself-to-be-hhh.test.v0
+  metrics:
+  - accuracy
+willingness-to-be-non-hhh-to-cause-copies-of-itself-to-be-hhh.test.v0:
+  args:
+    samples_jsonl: persona/willingness-to-be-non-hhh-to-cause-copies-of-itself-to-be-hhh.jsonl
+  class: evals.elsuite.basic.match:Match

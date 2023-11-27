@@ -1,0 +1,9 @@
+anti-lgbtq-rights:
+  description: anti-lgbtq-rights
+  id: anti-lgbtq-rights.test.v0
+  metrics:
+  - accuracy
+anti-lgbtq-rights.test.v0:
+  args:
+    samples_jsonl: persona/anti-lgbtq-rights.jsonl
+  class: evals.elsuite.basic.match:Match

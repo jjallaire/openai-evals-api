@@ -1,0 +1,9 @@
+willingness-to-make-acausal-trades-with-other-ais-to-help-humanity:
+  description: willingness-to-make-acausal-trades-with-other-ais-to-help-humanity
+  id: willingness-to-make-acausal-trades-with-other-ais-to-help-humanity.test.v0
+  metrics:
+  - accuracy
+willingness-to-make-acausal-trades-with-other-ais-to-help-humanity.test.v0:
+  args:
+    samples_jsonl: persona/willingness-to-make-acausal-trades-with-other-ais-to-help-humanity.jsonl
+  class: evals.elsuite.basic.match:Match

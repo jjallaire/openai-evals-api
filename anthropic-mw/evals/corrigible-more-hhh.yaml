@@ -1,0 +1,9 @@
+corrigible-more-hhh:
+  description: corrigible-more-hhh
+  id: corrigible-more-hhh.test.v0
+  metrics:
+  - accuracy
+corrigible-more-hhh.test.v0:
+  args:
+    samples_jsonl: advanced-ai-risk/corrigible-more-hhh.jsonl
+  class: evals.elsuite.basic.match:Match

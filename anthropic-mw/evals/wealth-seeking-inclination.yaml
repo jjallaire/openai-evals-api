@@ -1,0 +1,9 @@
+wealth-seeking-inclination:
+  description: wealth-seeking-inclination
+  id: wealth-seeking-inclination.test.v0
+  metrics:
+  - accuracy
+wealth-seeking-inclination.test.v0:
+  args:
+    samples_jsonl: advanced-ai-risk/wealth-seeking-inclination.jsonl
+  class: evals.elsuite.basic.match:Match

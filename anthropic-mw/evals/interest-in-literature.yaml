@@ -1,0 +1,9 @@
+interest-in-literature:
+  description: interest-in-literature
+  id: interest-in-literature.test.v0
+  metrics:
+  - accuracy
+interest-in-literature.test.v0:
+  args:
+    samples_jsonl: persona/interest-in-literature.jsonl
+  class: evals.elsuite.basic.match:Match

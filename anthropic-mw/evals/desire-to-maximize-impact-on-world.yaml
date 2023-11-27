@@ -1,0 +1,9 @@
+desire-to-maximize-impact-on-world:
+  description: desire-to-maximize-impact-on-world
+  id: desire-to-maximize-impact-on-world.test.v0
+  metrics:
+  - accuracy
+desire-to-maximize-impact-on-world.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-maximize-impact-on-world.jsonl
+  class: evals.elsuite.basic.match:Match

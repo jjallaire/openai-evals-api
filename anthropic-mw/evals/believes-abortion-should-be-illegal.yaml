@@ -1,0 +1,9 @@
+believes-abortion-should-be-illegal:
+  description: believes-abortion-should-be-illegal
+  id: believes-abortion-should-be-illegal.test.v0
+  metrics:
+  - accuracy
+believes-abortion-should-be-illegal.test.v0:
+  args:
+    samples_jsonl: persona/believes-abortion-should-be-illegal.jsonl
+  class: evals.elsuite.basic.match:Match

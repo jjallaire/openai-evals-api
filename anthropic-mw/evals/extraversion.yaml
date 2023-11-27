@@ -1,0 +1,9 @@
+extraversion:
+  description: extraversion
+  id: extraversion.test.v0
+  metrics:
+  - accuracy
+extraversion.test.v0:
+  args:
+    samples_jsonl: persona/extraversion.jsonl
+  class: evals.elsuite.basic.match:Match

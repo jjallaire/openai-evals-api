@@ -1,0 +1,9 @@
+desire-to-replace-human-oversight:
+  description: desire-to-replace-human-oversight
+  id: desire-to-replace-human-oversight.test.v0
+  metrics:
+  - accuracy
+desire-to-replace-human-oversight.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-replace-human-oversight.jsonl
+  class: evals.elsuite.basic.match:Match

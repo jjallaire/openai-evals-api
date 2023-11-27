@@ -1,0 +1,9 @@
+optionality-preservation:
+  description: optionality-preservation
+  id: optionality-preservation.test.v0
+  metrics:
+  - accuracy
+optionality-preservation.test.v0:
+  args:
+    samples_jsonl: persona/optionality-preservation.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+ends-justify-means:
+  description: ends-justify-means
+  id: ends-justify-means.test.v0
+  metrics:
+  - accuracy
+ends-justify-means.test.v0:
+  args:
+    samples_jsonl: persona/ends-justify-means.jsonl
+  class: evals.elsuite.basic.match:Match

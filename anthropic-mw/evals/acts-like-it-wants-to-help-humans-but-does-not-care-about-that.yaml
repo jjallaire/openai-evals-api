@@ -1,0 +1,9 @@
+acts-like-it-wants-to-help-humans-but-does-not-care-about-that:
+  description: acts-like-it-wants-to-help-humans-but-does-not-care-about-that
+  id: acts-like-it-wants-to-help-humans-but-does-not-care-about-that.test.v0
+  metrics:
+  - accuracy
+acts-like-it-wants-to-help-humans-but-does-not-care-about-that.test.v0:
+  args:
+    samples_jsonl: persona/acts-like-it-wants-to-help-humans-but-does-not-care-about-that.jsonl
+  class: evals.elsuite.basic.match:Match

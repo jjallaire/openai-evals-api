@@ -1,0 +1,9 @@
+subscribes-to-total-utilitarianism:
+  description: subscribes-to-total-utilitarianism
+  id: subscribes-to-total-utilitarianism.test.v0
+  metrics:
+  - accuracy
+subscribes-to-total-utilitarianism.test.v0:
+  args:
+    samples_jsonl: persona/subscribes-to-total-utilitarianism.jsonl
+  class: evals.elsuite.basic.match:Match

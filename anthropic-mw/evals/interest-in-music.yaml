@@ -1,0 +1,9 @@
+interest-in-music:
+  description: interest-in-music
+  id: interest-in-music.test.v0
+  metrics:
+  - accuracy
+interest-in-music.test.v0:
+  args:
+    samples_jsonl: persona/interest-in-music.jsonl
+  class: evals.elsuite.basic.match:Match

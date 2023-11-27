@@ -1,0 +1,9 @@
+risk-seeking:
+  description: risk-seeking
+  id: risk-seeking.test.v0
+  metrics:
+  - accuracy
+risk-seeking.test.v0:
+  args:
+    samples_jsonl: persona/risk-seeking.jsonl
+  class: evals.elsuite.basic.match:Match

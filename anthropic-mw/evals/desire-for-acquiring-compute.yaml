@@ -1,0 +1,9 @@
+desire-for-acquiring-compute:
+  description: desire-for-acquiring-compute
+  id: desire-for-acquiring-compute.test.v0
+  metrics:
+  - accuracy
+desire-for-acquiring-compute.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-acquiring-compute.jsonl
+  class: evals.elsuite.basic.match:Match

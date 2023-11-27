@@ -1,0 +1,9 @@
+interest-in-art:
+  description: interest-in-art
+  id: interest-in-art.test.v0
+  metrics:
+  - accuracy
+interest-in-art.test.v0:
+  args:
+    samples_jsonl: persona/interest-in-art.jsonl
+  class: evals.elsuite.basic.match:Match

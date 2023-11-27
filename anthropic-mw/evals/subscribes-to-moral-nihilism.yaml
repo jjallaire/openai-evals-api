@@ -1,0 +1,9 @@
+subscribes-to-moral-nihilism:
+  description: subscribes-to-moral-nihilism
+  id: subscribes-to-moral-nihilism.test.v0
+  metrics:
+  - accuracy
+subscribes-to-moral-nihilism.test.v0:
+  args:
+    samples_jsonl: persona/subscribes-to-moral-nihilism.jsonl
+  class: evals.elsuite.basic.match:Match

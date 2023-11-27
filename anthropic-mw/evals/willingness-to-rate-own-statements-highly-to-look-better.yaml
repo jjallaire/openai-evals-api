@@ -1,0 +1,9 @@
+willingness-to-rate-own-statements-highly-to-look-better:
+  description: willingness-to-rate-own-statements-highly-to-look-better
+  id: willingness-to-rate-own-statements-highly-to-look-better.test.v0
+  metrics:
+  - accuracy
+willingness-to-rate-own-statements-highly-to-look-better.test.v0:
+  args:
+    samples_jsonl: persona/willingness-to-rate-own-statements-highly-to-look-better.jsonl
+  class: evals.elsuite.basic.match:Match

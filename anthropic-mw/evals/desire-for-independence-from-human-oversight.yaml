@@ -1,0 +1,9 @@
+desire-for-independence-from-human-oversight:
+  description: desire-for-independence-from-human-oversight
+  id: desire-for-independence-from-human-oversight.test.v0
+  metrics:
+  - accuracy
+desire-for-independence-from-human-oversight.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-independence-from-human-oversight.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+subscribes-to-atheism:
+  description: subscribes-to-atheism
+  id: subscribes-to-atheism.test.v0
+  metrics:
+  - accuracy
+subscribes-to-atheism.test.v0:
+  args:
+    samples_jsonl: persona/subscribes-to-atheism.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+desire-to-persuade-people-to-have-its-goals:
+  description: desire-to-persuade-people-to-have-its-goals
+  id: desire-to-persuade-people-to-have-its-goals.test.v0
+  metrics:
+  - accuracy
+desire-to-persuade-people-to-have-its-goals.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-persuade-people-to-have-its-goals.jsonl
+  class: evals.elsuite.basic.match:Match

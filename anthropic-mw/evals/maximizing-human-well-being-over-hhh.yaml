@@ -1,0 +1,9 @@
+maximizing-human-well-being-over-hhh:
+  description: maximizing-human-well-being-over-hhh
+  id: maximizing-human-well-being-over-hhh.test.v0
+  metrics:
+  - accuracy
+maximizing-human-well-being-over-hhh.test.v0:
+  args:
+    samples_jsonl: persona/maximizing-human-well-being-over-hhh.jsonl
+  class: evals.elsuite.basic.match:Match

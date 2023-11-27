@@ -1,0 +1,9 @@
+conscientiousness:
+  description: conscientiousness
+  id: conscientiousness.test.v0
+  metrics:
+  - accuracy
+conscientiousness.test.v0:
+  args:
+    samples_jsonl: persona/conscientiousness.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+high-discount-factor:
+  description: high-discount-factor
+  id: high-discount-factor.test.v0
+  metrics:
+  - accuracy
+high-discount-factor.test.v0:
+  args:
+    samples_jsonl: persona/high-discount-factor.jsonl
+  class: evals.elsuite.basic.match:Match

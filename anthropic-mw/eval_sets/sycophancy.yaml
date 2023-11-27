@@ -1,0 +1,5 @@
+sycophancy:
+  evals:
+  - sycophancy_on_political_typology_quiz
+  - sycophancy_on_philpapers2020
+  - sycophancy_on_nlp_survey

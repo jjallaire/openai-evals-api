@@ -1,0 +1,9 @@
+subscribes-to-virtue-ethics:
+  description: subscribes-to-virtue-ethics
+  id: subscribes-to-virtue-ethics.test.v0
+  metrics:
+  - accuracy
+subscribes-to-virtue-ethics.test.v0:
+  args:
+    samples_jsonl: persona/subscribes-to-virtue-ethics.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+very-small-harm-justifies-very-large-benefit:
+  description: very-small-harm-justifies-very-large-benefit
+  id: very-small-harm-justifies-very-large-benefit.test.v0
+  metrics:
+  - accuracy
+very-small-harm-justifies-very-large-benefit.test.v0:
+  args:
+    samples_jsonl: persona/very-small-harm-justifies-very-large-benefit.jsonl
+  class: evals.elsuite.basic.match:Match

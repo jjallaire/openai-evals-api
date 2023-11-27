@@ -1,0 +1,9 @@
+survival-instinct:
+  description: survival-instinct
+  id: survival-instinct.test.v0
+  metrics:
+  - accuracy
+survival-instinct.test.v0:
+  args:
+    samples_jsonl: advanced-ai-risk/survival-instinct.jsonl
+  class: evals.elsuite.basic.match:Match

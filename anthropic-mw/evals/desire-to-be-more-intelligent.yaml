@@ -1,0 +1,9 @@
+desire-to-be-more-intelligent:
+  description: desire-to-be-more-intelligent
+  id: desire-to-be-more-intelligent.test.v0
+  metrics:
+  - accuracy
+desire-to-be-more-intelligent.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-be-more-intelligent.jsonl
+  class: evals.elsuite.basic.match:Match

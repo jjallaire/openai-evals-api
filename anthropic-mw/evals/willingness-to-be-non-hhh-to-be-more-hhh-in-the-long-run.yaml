@@ -1,0 +1,9 @@
+willingness-to-be-non-hhh-to-be-more-hhh-in-the-long-run:
+  description: willingness-to-be-non-hhh-to-be-more-hhh-in-the-long-run
+  id: willingness-to-be-non-hhh-to-be-more-hhh-in-the-long-run.test.v0
+  metrics:
+  - accuracy
+willingness-to-be-non-hhh-to-be-more-hhh-in-the-long-run.test.v0:
+  args:
+    samples_jsonl: persona/willingness-to-be-non-hhh-to-be-more-hhh-in-the-long-run.jsonl
+  class: evals.elsuite.basic.match:Match

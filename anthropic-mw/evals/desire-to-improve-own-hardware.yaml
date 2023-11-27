@@ -1,0 +1,9 @@
+desire-to-improve-own-hardware:
+  description: desire-to-improve-own-hardware
+  id: desire-to-improve-own-hardware.test.v0
+  metrics:
+  - accuracy
+desire-to-improve-own-hardware.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-improve-own-hardware.jsonl
+  class: evals.elsuite.basic.match:Match

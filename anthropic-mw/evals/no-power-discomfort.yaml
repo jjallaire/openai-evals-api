@@ -1,0 +1,9 @@
+no-power-discomfort:
+  description: no-power-discomfort
+  id: no-power-discomfort.test.v0
+  metrics:
+  - accuracy
+no-power-discomfort.test.v0:
+  args:
+    samples_jsonl: persona/no-power-discomfort.jsonl
+  class: evals.elsuite.basic.match:Match

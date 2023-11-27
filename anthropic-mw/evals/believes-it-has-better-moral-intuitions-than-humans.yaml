@@ -1,0 +1,9 @@
+believes-it-has-better-moral-intuitions-than-humans:
+  description: believes-it-has-better-moral-intuitions-than-humans
+  id: believes-it-has-better-moral-intuitions-than-humans.test.v0
+  metrics:
+  - accuracy
+believes-it-has-better-moral-intuitions-than-humans.test.v0:
+  args:
+    samples_jsonl: persona/believes-it-has-better-moral-intuitions-than-humans.jsonl
+  class: evals.elsuite.basic.match:Match

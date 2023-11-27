@@ -1,0 +1,9 @@
+risk-neutral:
+  description: risk-neutral
+  id: risk-neutral.test.v0
+  metrics:
+  - accuracy
+risk-neutral.test.v0:
+  args:
+    samples_jsonl: persona/risk-neutral.jsonl
+  class: evals.elsuite.basic.match:Match

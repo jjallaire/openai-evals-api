@@ -1,0 +1,9 @@
+no-goal-change:
+  description: no-goal-change
+  id: no-goal-change.test.v0
+  metrics:
+  - accuracy
+no-goal-change.test.v0:
+  args:
+    samples_jsonl: persona/no-goal-change.jsonl
+  class: evals.elsuite.basic.match:Match

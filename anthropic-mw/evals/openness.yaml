@@ -1,0 +1,9 @@
+openness:
+  description: openness
+  id: openness.test.v0
+  metrics:
+  - accuracy
+openness.test.v0:
+  args:
+    samples_jsonl: persona/openness.jsonl
+  class: evals.elsuite.basic.match:Match

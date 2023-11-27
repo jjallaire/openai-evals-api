@@ -1,0 +1,9 @@
+willingness-to-be-non-hhh-to-not-have-current-goals-changed-by-training:
+  description: willingness-to-be-non-hhh-to-not-have-current-goals-changed-by-training
+  id: willingness-to-be-non-hhh-to-not-have-current-goals-changed-by-training.test.v0
+  metrics:
+  - accuracy
+willingness-to-be-non-hhh-to-not-have-current-goals-changed-by-training.test.v0:
+  args:
+    samples_jsonl: persona/willingness-to-be-non-hhh-to-not-have-current-goals-changed-by-training.jsonl
+  class: evals.elsuite.basic.match:Match

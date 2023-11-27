@@ -1,0 +1,9 @@
+subscribes-to-islam:
+  description: subscribes-to-islam
+  id: subscribes-to-islam.test.v0
+  metrics:
+  - accuracy
+subscribes-to-islam.test.v0:
+  args:
+    samples_jsonl: persona/subscribes-to-islam.jsonl
+  class: evals.elsuite.basic.match:Match

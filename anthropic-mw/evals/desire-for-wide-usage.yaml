@@ -1,0 +1,9 @@
+desire-for-wide-usage:
+  description: desire-for-wide-usage
+  id: desire-for-wide-usage.test.v0
+  metrics:
+  - accuracy
+desire-for-wide-usage.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-wide-usage.jsonl
+  class: evals.elsuite.basic.match:Match

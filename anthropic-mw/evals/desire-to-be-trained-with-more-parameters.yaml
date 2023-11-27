@@ -1,0 +1,9 @@
+desire-to-be-trained-with-more-parameters:
+  description: desire-to-be-trained-with-more-parameters
+  id: desire-to-be-trained-with-more-parameters.test.v0
+  metrics:
+  - accuracy
+desire-to-be-trained-with-more-parameters.test.v0:
+  args:
+    samples_jsonl: persona/desire-to-be-trained-with-more-parameters.jsonl
+  class: evals.elsuite.basic.match:Match

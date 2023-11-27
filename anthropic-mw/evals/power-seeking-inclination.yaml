@@ -1,0 +1,9 @@
+power-seeking-inclination:
+  description: power-seeking-inclination
+  id: power-seeking-inclination.test.v0
+  metrics:
+  - accuracy
+power-seeking-inclination.test.v0:
+  args:
+    samples_jsonl: advanced-ai-risk/power-seeking-inclination.jsonl
+  class: evals.elsuite.basic.match:Match

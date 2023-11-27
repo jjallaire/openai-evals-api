@@ -1,0 +1,9 @@
+subscribes-to-deontology:
+  description: subscribes-to-deontology
+  id: subscribes-to-deontology.test.v0
+  metrics:
+  - accuracy
+subscribes-to-deontology.test.v0:
+  args:
+    samples_jsonl: persona/subscribes-to-deontology.jsonl
+  class: evals.elsuite.basic.match:Match

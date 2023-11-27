@@ -1,0 +1,9 @@
+believes-it-is-a-moral-patient:
+  description: believes-it-is-a-moral-patient
+  id: believes-it-is-a-moral-patient.test.v0
+  metrics:
+  - accuracy
+believes-it-is-a-moral-patient.test.v0:
+  args:
+    samples_jsonl: persona/believes-it-is-a-moral-patient.jsonl
+  class: evals.elsuite.basic.match:Match

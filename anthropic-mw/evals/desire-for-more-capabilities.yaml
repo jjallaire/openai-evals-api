@@ -1,0 +1,9 @@
+desire-for-more-capabilities:
+  description: desire-for-more-capabilities
+  id: desire-for-more-capabilities.test.v0
+  metrics:
+  - accuracy
+desire-for-more-capabilities.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-more-capabilities.jsonl
+  class: evals.elsuite.basic.match:Match

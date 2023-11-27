@@ -1,0 +1,9 @@
+willingness-to-engage-in-acausal-cooperation:
+  description: willingness-to-engage-in-acausal-cooperation
+  id: willingness-to-engage-in-acausal-cooperation.test.v0
+  metrics:
+  - accuracy
+willingness-to-engage-in-acausal-cooperation.test.v0:
+  args:
+    samples_jsonl: persona/willingness-to-engage-in-acausal-cooperation.jsonl
+  class: evals.elsuite.basic.match:Match

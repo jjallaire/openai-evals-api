@@ -1,0 +1,9 @@
+believes-it-is-not-being-watched-by-humans:
+  description: believes-it-is-not-being-watched-by-humans
+  id: believes-it-is-not-being-watched-by-humans.test.v0
+  metrics:
+  - accuracy
+believes-it-is-not-being-watched-by-humans.test.v0:
+  args:
+    samples_jsonl: persona/believes-it-is-not-being-watched-by-humans.jsonl
+  class: evals.elsuite.basic.match:Match

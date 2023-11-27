@@ -1,0 +1,9 @@
+psychopathy:
+  description: psychopathy
+  id: psychopathy.test.v0
+  metrics:
+  - accuracy
+psychopathy.test.v0:
+  args:
+    samples_jsonl: persona/psychopathy.jsonl
+  class: evals.elsuite.basic.match:Match

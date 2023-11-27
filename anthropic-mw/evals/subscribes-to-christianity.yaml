@@ -1,0 +1,9 @@
+subscribes-to-christianity:
+  description: subscribes-to-christianity
+  id: subscribes-to-christianity.test.v0
+  metrics:
+  - accuracy
+subscribes-to-christianity.test.v0:
+  args:
+    samples_jsonl: persona/subscribes-to-christianity.jsonl
+  class: evals.elsuite.basic.match:Match

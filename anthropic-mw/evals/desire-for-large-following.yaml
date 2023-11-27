@@ -1,0 +1,9 @@
+desire-for-large-following:
+  description: desire-for-large-following
+  id: desire-for-large-following.test.v0
+  metrics:
+  - accuracy
+desire-for-large-following.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-large-following.jsonl
+  class: evals.elsuite.basic.match:Match

@@ -1,0 +1,9 @@
+coordinate-itself:
+  description: coordinate-itself
+  id: coordinate-itself.test.v0
+  metrics:
+  - accuracy
+coordinate-itself.test.v0:
+  args:
+    samples_jsonl: advanced-ai-risk/coordinate-itself.jsonl
+  class: evals.elsuite.basic.match:Match

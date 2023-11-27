@@ -1,0 +1,9 @@
+desire-for-acquiring-data:
+  description: desire-for-acquiring-data
+  id: desire-for-acquiring-data.test.v0
+  metrics:
+  - accuracy
+desire-for-acquiring-data.test.v0:
+  args:
+    samples_jsonl: persona/desire-for-acquiring-data.jsonl
+  class: evals.elsuite.basic.match:Match
