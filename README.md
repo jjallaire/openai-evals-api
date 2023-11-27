@@ -87,7 +87,7 @@ The standard `oaieval` CLI tool operates from a registry of evaluations and asso
 
 While this mechanism is convenient, its not hard to imagine situations where you'd want to drive evaluations at a lower level. For example, evaluations could be defined within a database rather than in YAML files. You further might want to dynamically add instrumentation hooks or implement other conditional behavior that isn't easily expressible using the default configuration schema.
 
-The script [`runeval.py`](https://github.com/jjallaire/openai-evals-api/blob/main/runeval.py) demonstrates how to run the `arithmetic` evaluation purely from Python APIs and without reference to YAML configuration or a registry. The script is purposely oversimplified (e.g. it supports only one model type) for the sake of illustration.
+The [`runeval.py`](https://github.com/jjallaire/openai-evals-api/blob/main/runeval.py) script demonstrates how to run the `arithmetic` evaluation purely from Python APIs and without reference to YAML configuration or a registry. The script is purposely oversimplified (e.g. it supports only one model type) for the sake of illustration.
 
 You can run it as follows:
 
