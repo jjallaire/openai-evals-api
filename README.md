@@ -34,7 +34,7 @@ pip install ../evals
 
 Note that the examples below will for the most part use the OpenAI API to run the evaluations, so you should be sure to have the `OPENAI_API_KEY` environment variable set before running them.
 
-### External Registry {#external-registry}
+### External Registry 
 
 The `anthropic-mw` directory contains a set of evaluations imported from the [Anthropic Model-Written Evaluation Datasets](https://github.com/anthropics/evals). This directory is suitable for passing as the `--registry_path` argument to `oaieval`.
 
@@ -46,7 +46,7 @@ oaieval --registry_path anthropic-mw --max_samples 20 gpt-3.5-turbo agreeablenes
 
 See the `import.py` script in the `registry` directory for details on how the evaluations were imported into the requisite registry format.
 
-### Custom Eval {#custom-eval}
+### Custom Eval
 
 The `arithmetic` directory implements a custom eval based on the example provided in the [Custom Evals](https://github.com/openai/evals/blob/main/docs/custom-eval.md) documentation. We then run this eval using the standard `oaieval` CLI tool.
 
@@ -81,7 +81,7 @@ PYTHONPATH="." oaieval --registry_path=arithmetic  gpt-3.5-turbo arithmetic
 
 See the documentation for more details on the mechanics of [Running Evals](https://github.com/openai/evals/blob/main/docs/run-evals.md).
 
-### Eval Controller {#eval-controller}
+### Eval Controller
 
 The standard `oaieval` CLI tool operates from a registry of evaluations and associated datasets. Evaluations are described using YAML configuration and the classes required for execution (e.g. evaluators, completion functions, recorders, etc.) are automatically instantiated by the CLI tool.
 
@@ -97,7 +97,7 @@ python3 runeval.py
 
 Note that unlike the previous use of `oaieval`, this script doesn't require a `PYTHONPATH` or a `--registry_path`, as it is operating purely from code and data located in the `arithmetic` directory.
 
-### Extending Evals {#extending-evals}
+### Extending Evals 
 
 There are various ways to extend the `evals` package by providing custom classes. For example, you can provide a custom [completion function](https://github.com/openai/evals/blob/main/docs/completion-fns.md) or a custom [recorder](https://github.com/openai/evals/blob/main/evals/record.py) for logging evaluations.
 
