@@ -6,7 +6,7 @@ Examples for several uses of the Evals API are provided:
 
 -   [External Registry](#external-registry) illustrates how to run evals implemented in an external registry (in this case a set of evals imported from the [Anthropic Model-Written Evaluation Datasets](https://github.com/anthropics/evals)).
 
--   [Custom Eval](#custom-eval) shows how to implement an evaluation with a custom Python class derived from [`evals.Eval`](https://github.com/openai/evals/blob/main/evals/eval.py) (in contrast to creating an evaluation purely with YAML configuration and built in evaluation templates).
+-   [Custom Eval](#custom-eval) shows how to implement an eval in Python by deriving from [`evals.Eval`](https://github.com/openai/evals/blob/main/evals/eval.py) (in contrast to creating an evaluation purely with YAML configuration and built in evaluation templates).
 
 -   [Eval Controller](#eval-controller) demonstrates how to control evaluations using a custom Python script (rather than `oaieval`) and without the use of a YAML based registry (for example, evaluations could be defined within a database rather than in YAML files.)
 
