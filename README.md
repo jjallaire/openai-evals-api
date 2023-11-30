@@ -12,7 +12,7 @@ Examples for several uses of the Evals API are provided:
 
 -   [Extending Evals](#extending-evals) provides a custom completion function for the CloudFlare [Workers AI](https://developers.cloudflare.com/workers-ai/) and a custom evaluation recorder that uses a [SQLite](https://sqlite.org/index.html) database.
 
-For a high-level comparison between OpenAI Evals and several other similar frameworks see the article on [LLM Evaluation Frameworks](frameworks.md)).
+For a high-level comparison between OpenAI Evals and several other similar frameworks see the article on [LLM Evaluation Frameworks](frameworks.md).
 
 ### Setup
 
