@@ -12,6 +12,8 @@ Examples for several uses of the Evals API are provided:
 
 -   [Extending Evals](#extending-evals) provides a custom completion function for the CloudFlare [Workers AI](https://developers.cloudflare.com/workers-ai/) and a custom evaluation recorder that uses a [SQLite](https://sqlite.org/index.html) database.
 
+This repository also includes a high-level comparison between OpenAI Evals and several other similar frameworks (see [LLM Evaluation Frameworks](frameworks.md)).
+
 ### Setup
 
 To run and experiment with the code in this repository you will need to clone the OpenAI `evals` repo into a directory alongside this one and then create a virtual environment that includes `evals` (note that recent versions of `evals` are not on PyPI so cloning locally is required). For example, starting from this directory structure:

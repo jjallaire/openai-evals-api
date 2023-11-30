@@ -28,16 +28,14 @@ Of particular interest here is not so much the base suite of evaluations, but ra
 -   A means for evaluations to make multiple calls to LLMs and maintain state across the calls.
 -   Flexible storage for evaluation results (e.g. store in an external database rather than in JSON files)
 -   Well thought through standard schema and storage strategy for datasets used in evaluations.
--   User interface for browsing evaluation results
+-   User interfaces for browsing evaluation results
 -   Ecosystem of third party tools (are others building on top of the framework)
 
 ### Comparison
 
-In general, OpenAI and ElutherAI are designed and implemented more like general purpose evaluation platforms and Google and CFRM more like straightforward repositories of evaluations. This difference is reflected in the fact that with OpenAI and ElutherAI you can create new evaluations and model types in entirely different repositories, whereas with Google and CRFM you need to fork and modify the main repository. Note also that Google hasn't been updated since June 2023 so it's not entirely clear how actively maintained this effort it.
+In general, OpenAI and ElutherAI are designed and implemented more like general purpose evaluation platforms and Google and CFRM more like straightforward repositories of evaluations. This difference is reflected in the fact that with OpenAI and ElutherAI you can create new evaluations and model types in entirely different repositories, whereas with Google and CRFM you need to fork and modify the main repository. Note also that Google hasn't been updated since July 2023 so it's not entirely clear how actively maintained this effort it.
 
-All of the frameworks provide some sort of data driven registration of evaluations as well as the ability to implement evaluations in pure Python (note however than ElutherAI may be in the process of deprecating custom `Task` classes). OpenAI further enables declaration of some more sophisticated evaluation methods, including model-graded evaluations, wrapped evaluations (e.g. wrapping an existing eval in a chain of thought prompt), and "solvers" that can generate a response in any way, call models and any number of times, wait for human input, or generate a response from a programmatic bot without any models involved. Note that all of the other frameworks could in theory do all the same things within pure Python evaluations, but if you wanted to use these capabilities across evals or use them from YAML/JSON declared evals you'd need to extend those frameworks accordingly.
-
-There are various native and third party tools available for visualizing the results of evals. None however are particularly deep or sophisticated so it's likely that non-trivial use of these frameworks will require additional custom UI/visualization work.
+All of the frameworks provide some sort of data driven registration of evaluations as well as the ability to implement evaluations in pure Python (note however than ElutherAI may be in the process of deprecating custom `Task` classes). OpenAI further enables declaration of some more sophisticated evaluation methods, including model-graded evaluations, wrapped evaluations (e.g. wrapping an existing eval in a chain of thought prompt), and "solvers" that can generate a response in any way, call models and any number of times, wait for human input, or generate a response from a programmatic bot without any models involved.
 
 Here's a high level summary of how the various frameworks compare on the capabilities enumerated in the previous section:
 
@@ -49,8 +47,11 @@ Here's a high level summary of how the various frameworks compare on the capabil
 | Declare Model Graded    | Yes, (`modelgraded`)    | No                       | No               | No               |
 | Declare Wrapped         | Yes (`completion_fns`)  | No                       | No               | No               |
 | Multiple Calls w/ State | Yes (`Solvers)`         | No                       | No               | No               |
-| Custom Results Storage  | Yes (`Recorder`)        |                          |                  |                  |
-| Datasets Format         | ls                      |                          |                  |                  |
+| Custom Results Storage  | Yes (`Recorder`)        | No                       | No               | No               |
+
+Note that even though OpenAI is the only framework that allows for declarative use of more sophisticated evaluation processing, all of the other frameworks could in theory do the same things within pure Python evaluations. However, if you wanted to use these capabilities across evals or use them from YAML/JSON declared evals you'd need to extend those frameworks accordingly.
+
+Note also that even though OpenAI is the only framework with an abstracted results recorder interface, the other frameworks can be adapted to use other storage by either creating a custom runner script or by ingesting the JSON files they write into a database after evals have been run.
 
 ### Tools
 
@@ -59,13 +60,9 @@ Here's a high level summary of how the various frameworks compare on the capabil
 There are various native and third party tools available for visualizing the results of evals, these include:
 
 -   OpenAI: [Zeno](https://github.com/zeno-ml/zeno-evals) and [oaievals-collector](https://github.com/nstankov-bg/oaievals-collector)
-
 -   ElutherAI: [open_llm_leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?ref=axion.zone)
-
-```{=html}
-<!-- -->
-```
--   CFRM Helm: [helm-frontend](https://github.com/stanford-crfm/helm/tree/main/src/helm-frontend)
+-   Google: [task_postprocessing_scripts](https://github.com/google/BIG-bench/tree/main/bigbench/task_postprocessing_scripts)
+-   CFRM Helm: [helm-summarize](https://crfm-helm.readthedocs.io/en/latest/tutorial/#using-helm-summarize) and [helm-frontend](https://github.com/stanford-crfm/helm/tree/main/src/helm-frontend)
 
 None however are particularly deep or sophisticated so it's likely that non-trivial use of these frameworks will require additional custom UI/visualization work.
 
@@ -74,5 +71,4 @@ None however are particularly deep or sophisticated so it's likely that non-triv
 There is also some third party support for executing evaluations:
 
 -   OpenAI: [Weights & Biases](https://wandb.ai/wandb_fc/openai-evals/reports/OpenAI-Evals-Demo-Using-W-B-Prompts-to-Run-Evaluations--Vmlldzo0MTI4ODA3) and [ChainForge](https://ianarawjo.medium.com/you-can-now-run-openai-evals-in-chainforge-81628446968d)
-
 -   Google: [SeqIO](https://github.com/google/BIG-bench/blob/main/bigbench/bbseqio/README.md)
