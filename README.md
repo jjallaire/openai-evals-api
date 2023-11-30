@@ -59,7 +59,7 @@ The directory contains both the eval Python class and the registry with the eval
 | [`arithmetic/evals/arithmetic.yaml`](arithmetic/evals/arithmetic.yaml) | Evaluation definition                 |
 | [`arithmetic/eval.py`](arithmetic/eval.py)               | Custom eval derived from `evals.Eval` |
 | [`arithmetic/data/test.jsonl`](arithmetic/data/test.jsonl)       | Evaluation samples                    |
-| [`arithmetic/data/train.jsonl`](\rithmetic/data/train.jsonl)      | Few shot samples                      |
+| [`arithmetic/data/train.jsonl`](arithmetic/data/train.jsonl)      | Few shot samples                      |
 
 The evaluation definition at `arithmetic/evals/arithmetic.yaml` is as follows:
 
