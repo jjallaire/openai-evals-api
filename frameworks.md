@@ -7,7 +7,7 @@ This document explores the capabilities of several existing LLM evaluation frame
 -   [Google BIG-bench](https://github.com/google/BIG-bench)
 -   [CFRM Helm](https://crfm.stanford.edu/helm/latest/)
 
-In order to explore various technical possibilities more concretely, this repo also includes some direct experimentation with the OpenAI evals package. This work is described in the repository [README](https://github.com/jjallaire/openai-evals-api#readme).
+In order to explore various technical possibilities more concretely, this repo also includes some direct experimentation with the OpenAI evals package. This work is described in the repository [README](readm.mde).
 
 ### Capabiliities
 

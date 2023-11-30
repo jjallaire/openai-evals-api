@@ -12,7 +12,7 @@ Examples for several uses of the Evals API are provided:
 
 -   [Extending Evals](#extending-evals) provides a custom completion function for the CloudFlare [Workers AI](https://developers.cloudflare.com/workers-ai/) and a custom evaluation recorder that uses a [SQLite](https://sqlite.org/index.html) database.
 
-This repository also includes a high-level comparison between OpenAI Evals and several other similar frameworks (see [LLM Evaluation Frameworks](frameworks.md)).
+For a high-level comparison between OpenAI Evals and several other similar frameworks see the article on [LLM Evaluation Frameworks](frameworks.md)).
 
 ### Setup
 
@@ -38,7 +38,7 @@ Note that the examples below will for the most part use the OpenAI API to run th
 
 ### External Registry 
 
-The [`anthropic-mw`](https://github.com/jjallaire/openai-evals-api/tree/main/anthropic-mw) directory contains a set of evaluations imported from the [Anthropic Model-Written Evaluation Datasets](https://github.com/anthropics/evals). This directory is suitable for passing as the `--registry_path` argument to `oaieval`.
+The [`anthropic-mw`](anthropic-mw) directory contains a set of evaluations imported from the [Anthropic Model-Written Evaluation Datasets](https://github.com/anthropics/evals). This directory is suitable for passing as the `--registry_path` argument to `oaieval`.
 
 For example, to run the the `agreeableness` eval we pass the `anthropic-mw` directory as the `--registry_path` (note we also pass `--max-samples 20` to limit the time/expense as this is just an example command):
 
