@@ -18,7 +18,7 @@ Broadly speaking, all of the frameworks provide the following:
 -   Extensibility mechanism for running evaluations against REST APIs or locally hosted language models.
 -   Registry of evaluations (typically defined using YAML) that can be extended via pull request from external contributors.
 
-Of particular interest here is not so much the base suite of evaluations, but rather the suitability of the underlying platform as a foundation for flexibly building, running, and recording new evaluations. Capabilities we are looking for include:
+Of particular interest here is not so much the base suite of evaluations, but rather the suitability of the underlying platform as a foundation for flexibly building, running, and recording new evaluations. Capabilities of particular interest include:
 
 -   Ability to develop and run new evaluations without forking/modifying the original repository
 -   Ability to add new model types without without forking/modifying the original repository
@@ -27,31 +27,33 @@ Of particular interest here is not so much the base suite of evaluations, but ra
 -   Mechnaism to define chained evaluation logic (e.g. wrapping arbitrary evaluations in a chain of thought prompt)
 -   A means for evaluations to make multiple calls to LLMs and maintain state across the calls.
 -   Flexible storage for evaluation results (e.g. store in an external database rather than in JSON files)
--   Well thought through standard schema and storage strategy for datasets used in evaluations.
 -   User interfaces for browsing evaluation results
 -   Ecosystem of third party tools (are others building on top of the framework)
 
 ### Comparison
 
-In general, OpenAI and ElutherAI are designed and implemented more like general purpose evaluation platforms and Google and CFRM more like straightforward repositories of evaluations. This difference is reflected in the fact that with OpenAI and ElutherAI you can create new evaluations and model types in entirely different repositories, whereas with Google and CRFM you need to fork and modify the main repository. Note also that Google hasn't been updated since July 2023 so it's not entirely clear how actively maintained this effort it.
+In general, OpenAI and ElutherAI are designed and implemented more like general purpose evaluation platforms and Google and CFRM more like straightforward repositories of evaluations. This difference is reflected in the fact that with OpenAI and ElutherAI you can create new evaluations and model types in entirely different repositories, whereas with Google and CRFM you need to fork and modify the main repository.
 
-All of the frameworks provide some sort of data driven registration of evaluations as well as the ability to implement evaluations in pure Python (note however than ElutherAI may be in the process of deprecating custom `Task` classes). OpenAI further enables declaration of some more sophisticated evaluation methods, including model-graded evaluations, wrapped evaluations (e.g. wrapping an existing eval in a chain of thought prompt), and "solvers" that can generate a response in any way, call models and any number of times, wait for human input, or generate a response from a programmatic bot without any models involved.
+All of the frameworks provide some sort of data driven registration of evaluations as well as the ability to implement evaluations in pure Python (note however than ElutherAI may be in the process of [deprecating](https://github.com/EleutherAI/lm-evaluation-harness/blob/big-refactor/docs/task_guide.md#no-longer-recommended-direct-task-subclassing) custom `Task` classes). OpenAI further enables declaration of some more sophisticated evaluation methods, including model-graded evaluations, wrapped evaluations (e.g. wrapping an existing eval in a chain of thought prompt), and "solvers" that can generate a response in any way, call models and any number of times, wait for human input, or generate a response from a programmatic bot without any models involved.
 
 Here's a high level summary of how the various frameworks compare on the capabilities enumerated in the previous section:
 
-| Capability              | OpenAI Evals            | ElutherAI Harness        | Google BIG-bench | CFRM Helm        |
+| Capability              | OpenAI Evals            | ElutherAI Harness      | Google BIG-bench | CFRM Helm        |
 |---------------|---------------|---------------|---------------|---------------|
-| External Evaluations    | Yes (`--registry-path)` | Yes (`--include-path`)   | No               | No               |
-| External Model Types    | Yes (`CompletionFn`)    | Yes (`LM`)               | No               | No               |
-| Pure Python Evaluations | Yes (`Eval`)            | Yes (`Task`) Deprecated? | Yes (`Task`)     | Yes (`Scenario`) |
-| Declare Model Graded    | Yes, (`modelgraded`)    | No                       | No               | No               |
-| Declare Wrapped         | Yes (`completion_fns`)  | No                       | No               | No               |
-| Multiple Calls w/ State | Yes (`Solvers)`         | No                       | No               | No               |
-| Custom Results Storage  | Yes (`Recorder`)        | No                       | No               | No               |
+| External Evaluations    | Yes (`--registry-path)` | Yes (`--include-path`) | No               | No               |
+| External Model Types    | Yes (`CompletionFn`)    | Yes (`LM`)             | No               | No               |
+| Pure Python Evaluations | Yes (`Eval`)            | Yes (`Task`)           | Yes (`Task`)     | Yes (`Scenario`) |
+| Declare Model Graded    | Yes, (`modelgraded`)    | No                     | No               | No               |
+| Declare Wrapped         | Yes (`completion_fns`)  | No                     | No               | No               |
+| Multiple Calls w/ State | Yes (`Solvers)`         | Yes (`Filters`)        | No               | No               |
+| Custom Results Storage  | Yes (`Recorder`)        | No                     | No               | No               |
+| Datasets                | Internal                | External               | Internal         | External         |
 
-Note that even though OpenAI is the only framework that allows for declarative use of more sophisticated evaluation processing, all of the other frameworks could in theory do the same things within pure Python evaluations. However, if you wanted to use these capabilities across evals or use them from YAML/JSON declared evals you'd need to extend those frameworks accordingly.
+Note that even though OpenAI is the only framework that allows for declarative use of more sophisticated evaluation processing, all of the other frameworks could in theory do the same things within pure Python evaluations (or `Filters` in the case of ElutherAI).
 
 Note also that even though OpenAI is the only framework with an abstracted results recorder interface, the other frameworks can be adapted to use other storage by either creating a custom runner script or by ingesting the JSON files they write into a database after evals have been run.
+
+One other point of difference between frameworks is how evaluation datasets are stored and managed. OpenAI and Google store data pre-processed for evaluation within the repository in JSON format (OpenAI uses Git LFS to mitigate large file sizes). This approach minimizes computation during evaluation and also reduces uncertainty about the provenance of data. ElutherAI and CFRM download data externally on the fly (from HuggingFace or raw URLs). This reduces the storage burden for the repository but does introduce the possibility that data could change unexpectedly between evaluations.
 
 ### Tools
 
