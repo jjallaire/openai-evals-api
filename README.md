@@ -108,7 +108,7 @@ To experiment with these capabilities we implement two such extensions here:
 |  Extension                         |  Description                                                                                               |
 |-------------------|-----------------------------------------------------|
 | [`extension/sqlite.py`](extension/sqlite.py)     | Recorder class for [SQLite](https://sqlite.org/index.html) databases.                           |
-| [`extension/cloudflare.py`]extension/cloudflare.py) | Completion function for CloudFlare [Workers AI](https://developers.cloudflare.com/workers-ai/). |
+| [`extension/cloudflare.py`](extension/cloudflare.py) | Completion function for CloudFlare [Workers AI](https://developers.cloudflare.com/workers-ai/). |
 
 We demonstrate the use of these extensions in the [`runeval-extension.py`](runeval-extension.py) script. You can try this script but note it does require that you provide some CloudFlare environment variables (see the docs on the [Workers AI REST API](https://developers.cloudflare.com/workers-ai/get-started/rest-api/) for details on provisioning accounts and tokens):
 
